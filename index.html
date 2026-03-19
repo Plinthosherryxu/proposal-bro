@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>论文搭子来了 — AI Research Proposal 助手</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0e1117;
+    --bg2: #151b27;
+    --bg3: #1c2333;
+    --border: rgba(255,255,255,0.08);
+    --border-hover: rgba(255,255,255,0.16);
+    --text: #e8eaf0;
+    --text-muted: #8891a8;
+    --text-dim: #4f5870;
+    --accent: #7eb8f7;
+    --accent-dim: rgba(126,184,247,0.12);
+    --accent-border: rgba(126,184,247,0.3);
+    --gold: #c9a96e;
+    --gold-dim: rgba(201,169,110,0.1);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(14,17,23,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    color: var(--text);
+    letter-spacing: 0.01em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--accent);
+    color: #071224 !important;
+    padding: 7px 18px;
+    border-radius: 6px;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    transition: opacity 0.2s !important;
+  }
+
+  .nav-cta:hover { opacity: 0.88; color: #071224 !important; }
+
+  section { padding: 6rem 2rem; max-width: 900px; margin: 0 auto; }
+
+  /* HERO */
+  .hero {
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .hero-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin-bottom: 2.5rem;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #071224;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 13px 28px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+  .hero-note {
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* SECTION HEADERS */
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
+  }
+
+  .section-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 520px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+
+  /* PITCH CARDS */
+  .pitch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+
+  .pitch-card {
+    background: var(--bg2);
+    padding: 1.75rem;
+  }
+
+  .pitch-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+    display: block;
+    line-height: 1;
+  }
+
+  .pitch-card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .pitch-card p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* HOW IT WORKS */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 1.5rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+  }
+
+  .step:last-child { padding-bottom: 0; }
+
+  .step-num-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--accent-border);
+    background: var(--accent-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .step-line {
+    width: 1px;
+    flex: 1;
+    background: var(--border);
+    margin-top: 8px;
+  }
+
+  .step:last-child .step-line { display: none; }
+
+  .step-body { padding-top: 6px; }
+
+  .step-body h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+
+  .step-body p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  .step-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--gold-dim);
+    color: var(--gold);
+    border: 1px solid rgba(201,169,110,0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 0.6rem;
+  }
+
+  /* PRICING */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .price-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .price-card.featured {
+    border-color: var(--accent-border);
+    background: var(--bg3);
+  }
+
+  .price-badge {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #071224;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .price-type {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .price-amount {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.6rem;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .price-original {
+    font-size: 13px;
+    color: var(--text-dim);
+    text-decoration: line-through;
+    margin-bottom: 1.25rem;
+  }
+
+  .price-features {
+    list-style: none;
+    margin-bottom: 1.75rem;
+  }
+
+  .price-features li {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .price-features li::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .btn-outline {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--border-hover);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 11px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .btn-outline:hover { border-color: var(--accent-border); background: var(--accent-dim); }
+
+  .btn-outline.primary-outline {
+    border-color: var(--accent-border);
+    color: var(--accent);
+  }
+
+  .btn-outline.primary-outline:hover { background: var(--accent-dim); }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: 0; }
+
+  .faq-item {
+    border-top: 1px solid var(--border);
+    padding: 1.25rem 0;
+  }
+
+  .faq-item:last-child { border-bottom: 1px solid var(--border); }
+
+  .faq-q {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+  }
+
+  .faq-a {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    text-align: center;
+    padding: 5rem 2rem 6rem;
+  }
+
+  .cta-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .cta-inner h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .cta-inner p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 2rem;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 1.25rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.25rem; }
+    .hero { min-height: 80vh; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">论文搭子来了</span>
+  <ul class="nav-links">
+    <li><a href="#how">如何使用</a></li>
+    <li><a href="#pricing">定价</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#chat">开始对话</a></li>
+    <li><a href="#chat" class="nav-cta">立即开始</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">AI Research Proposal 助手</div>
+  <h1>你的论文方向，<br><em>一起想清楚</em></h1>
+  <p class="hero-sub">不是代写，是陪你思考。通过 AI 对话帮你从兴趣出发，找到真正可行的研究方向，生成可直接交给导师的英文 Proposal。</p>
+  <div class="hero-actions">
+    <a href="#chat" class="btn-primary">免费开始对话 →</a>
+    <span class="hero-note">对话免费 · 付费后生成 Proposal · 2个工作日交付</span>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- WHY -->
+<section id="why">
+  <div class="section-label">为什么选择我们</div>
+  <h2 class="section-title">比纯 AI 工具更靠谱，<br>比辅导机构更快更便宜</h2>
+  <p class="section-sub">通用 AI 工具不懂学术规范，辅导机构要价万元还需等两周。我们介于两者之间。</p>
+  <div class="pitch-grid">
+    <div class="pitch-card">
+      <span class="pitch-num">01</span>
+      <h3>中文对话，英文输出</h3>
+      <p>用母语聊清楚想法，拿到一份可以直接提交给导师的学术英文 Proposal。</p>
+    </div>
+    <div class="pitch-card">
+      <span class="pitch-num">02</span>
+      <h3>AI 引导 + 人工审核</h3>
+      <p>每一份 Proposal 都经过学术团队逐份审核，文献引用附 DOI 链接可查。</p>
+    </div>
+    <div class="pitch-card">
+      <span class="pitch-num">03</span>
+      <h3>研究方向来自你自己</h3>
+      <p>AI 负责引导和结构化，研究方向始终是你自己的想法——导师问你答得上来。</p>
+    </div>
+    <div class="pitch-card">
+      <span class="pitch-num">04</span>
+      <h3>2 个工作日交付</h3>
+      <p>机构的 1/10 价格，不到 1/5 的等待时间。付款后 2 个工作日内发到邮箱。</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-label">使用流程</div>
+  <h2 class="section-title">四步完成你的 Proposal</h2>
+  <p class="section-sub">从模糊兴趣到可提交文档，整个过程约 30 分钟。</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num-col">
+        <div class="step-num">1</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-body">
+        <div class="step-tag">免费</div>
+        <h3>免费对话引导</h3>
+        <p>告诉我你的专业、学校和模糊的兴趣方向，AI 通过提问帮你一步步收窄研究范围，全程中文对话。约 20–30 分钟。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num-col">
+        <div class="step-num">2</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-body">
+        <div class="step-tag">免费</div>
+        <h3>确认 Research Gap 和研究方向</h3>
+        <p>AI 识别 2–3 个可用的 Research Gap，解释每种类型是什么，由你选择最感兴趣的方向，并确认 Research Question。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num-col">
+        <div class="step-num">3</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-body">
+        <div class="step-tag">付费</div>
+        <h3>付款，2 个工作日内交付</h3>
+        <p>确认方向后完成支付（支持支付宝、微信支付、银行卡），学术团队审核并生成完整英文 Proposal，发送至你的邮箱。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num-col">
+        <div class="step-num">4</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-body">
+        <h3>拿去跟导师讨论</h3>
+        <p>Proposal 包含 Research Question、Literature Review 框架、Research Gap 论证、Methodology 建议和参考文献列表（附 DOI），可直接提交导师审阅。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">定价</div>
+  <h2 class="section-title">早鸟价，限时开放</h2>
+  <p class="section-sub">前 50 份享受早鸟价。对话引导完全免费，确认方向后再付款。</p>
+
+  <div class="pricing-grid">
+    <div class="price-card featured">
+      <div class="price-badge">最受欢迎</div>
+      <div class="price-type">硕士 Dissertation Proposal</div>
+      <div class="price-amount">£49</div>
+      <div class="price-original">正式价 £99</div>
+      <ul class="price-features">
+        <li>Research Question + Background</li>
+        <li>Literature Review 框架</li>
+        <li>Research Gap 论证</li>
+        <li>Methodology 建议</li>
+        <li>参考文献列表（附 DOI）</li>
+        <li>学术团队人工审核</li>
+      </ul>
+      <a href="https://buy.stripe.com/eVq9AL2Sd1dP6vDffF0ZW00" target="_blank" class="btn-outline primary-outline">立即获取 →</a>
+    </div>
+    <div class="price-card">
+      <div class="price-type">博士申请 Research Proposal</div>
+      <div class="price-amount">£99</div>
+      <div class="price-original">正式价 £199</div>
+      <ul class="price-features">
+        <li>硕士版全部内容</li>
+        <li>更深度的 Literature Review</li>
+        <li>细化 Methodology 设计</li>
+        <li>学术定位与贡献阐述</li>
+        <li>适合申请 PhD 程序</li>
+        <li>学术团队人工审核</li>
+      </ul>
+      <a href="#chat" class="btn-outline">先免费对话</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label">常见问题</div>
+  <h2 class="section-title">你可能想知道的</h2>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">这算代写吗？学校会有问题吗？</div>
+      <div class="faq-a">不算。我们的产品定位是"头脑风暴与思路梳理"工具，类似于和导师开 office hour。研究方向始终来自你自己的想法，AI 负责引导和结构化。最终的 Dissertation 还是你自己写的，Proposal 只是你去跟导师讨论用的草稿。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">生成的文献是真实存在的吗？</div>
+      <div class="faq-a">是的。我们通过学术数据库（Semantic Scholar）检索真实文献，每一篇都附有 DOI 链接，你可以直接验证。这是我们和纯 AI 工具最大的区别之一——AI 可能会编造不存在的论文，我们不会。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">我完全不知道写什么题目，可以用吗？</div>
+      <div class="faq-a">这正是我们服务的核心用户。对话引导阶段就是从你的模糊兴趣出发，逐步帮你收窄方向，你不需要提前准备任何东西，从零开始聊就好。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">支持哪些学科？</div>
+      <div class="faq-a">目前主要覆盖商科、社会科学、建筑环境、房地产相关专业，正在扩展到更多学科。如果你不确定自己的专业是否支持，可以先免费开始对话，AI 会告诉你。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">如果对结果不满意怎么办？</div>
+      <div class="faq-a">如果 Proposal 的方向与对话中确认的方向不符，我们会免费修改。如果想换一个完全不同的研究方向重新生成，需要按正价再次付款。</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CHAT EMBED -->
+<section id="chat">
+  <div class="section-label">立即开始</div>
+  <h2 class="section-title">直接在这里开始对话</h2>
+  <p class="section-sub">不需要注册，不需要准备任何东西，直接告诉我你的专业和模糊的兴趣方向就好。</p>
+  <div style="border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--bg2);">
+    <iframe
+      src="https://udify.app/chatbot/1npdrTMQfgGlVplh"
+      style="width: 100%; height: 680px; display: block;"
+      frameborder="0"
+      allow="microphone">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  © 2026 论文搭子来了 · AI Research Proposal 生成服务
+</footer>
+
+</body>
+</html>
