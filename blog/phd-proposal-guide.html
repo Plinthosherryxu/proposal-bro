@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhD 申请 Research Proposal 怎么写？完整攻略（2026版）| 论文搭子来了</title>
+<meta name="description" content="PhD 申请 Research Proposal 和硕士完全不同。本文详解博士申请 Proposal 的结构、字数、评审标准，以及与 MSc Dissertation Proposal 的核心区别，附写作框架和常见拒信原因分析。">
+<meta name="keywords" content="PhD 申请 research proposal, 博士申请 研究计划, PhD proposal 怎么写, 英国博士申请, research proposal PhD, 博士研究计划书, 申请博士 proposal 模板">
+<link rel="alternate" hreflang="zh-CN" href="https://plinthosherryxu.github.io/proposal-bro/blog/phd-proposal-guide.html" />
+<link rel="canonical" href="https://plinthosherryxu.github.io/proposal-bro/blog/phd-proposal-guide.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0e1117;
+    --bg2: #151b27;
+    --bg3: #1c2333;
+    --border: rgba(255,255,255,0.08);
+    --border-hover: rgba(255,255,255,0.16);
+    --text: #e2e4e9;
+    --text-muted: #8891a8;
+    --text-dim: #4f5870;
+    --accent: #7eb8f7;
+    --accent-dim: rgba(126,184,247,0.10);
+    --accent-border: rgba(126,184,247,0.25);
+    --gold: #c9a96e;
+    --gold-dim: rgba(201,169,110,0.08);
+    --red: #e85d5d;
+    --red-dim: rgba(232,93,93,0.08);
+    --green: #5dcc8b;
+    --green-dim: rgba(93,204,139,0.08);
+    --purple: #b48ef7;
+    --purple-dim: rgba(180,142,247,0.10);
+    --purple-border: rgba(180,142,247,0.25);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans SC', 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(14,17,23,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px; color: var(--text);
+    text-decoration: none;
+  }
+
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+
+  .nav-links a {
+    color: var(--text-muted); text-decoration: none;
+    font-size: 13px; font-weight: 400; transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--accent); color: #071224 !important;
+    padding: 6px 16px; border-radius: 6px;
+    font-weight: 500 !important; font-size: 12px !important;
+  }
+
+  article {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .article-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .article-label::before {
+    content: ''; display: inline-block;
+    width: 16px; height: 1px; background: var(--accent);
+  }
+
+  article h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.2; color: var(--text);
+    margin-bottom: 1rem; letter-spacing: -0.01em;
+  }
+
+  .article-meta {
+    font-size: 13px; color: var(--text-dim);
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  article h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem; color: var(--text);
+    margin: 3rem 0 1rem; line-height: 1.3;
+  }
+
+  article h3 {
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--text); margin: 2rem 0 0.75rem;
+  }
+
+  article p {
+    color: var(--text-muted); margin-bottom: 1.25rem;
+    font-size: 15px;
+  }
+
+  article strong { color: var(--text); font-weight: 500; }
+
+  /* CALLOUTS */
+  .callout {
+    background: var(--bg2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout-warn { border-left-color: var(--gold); }
+  .callout-red { border-left-color: var(--red); }
+  .callout-green { border-left-color: var(--green); }
+  .callout-purple { border-left-color: var(--purple); }
+
+  /* MSC VS PHD COMPARE TABLE */
+  .compare {
+    width: 100%; border-collapse: collapse;
+    margin: 1.5rem 0; font-size: 14px;
+  }
+
+  .compare th {
+    text-align: left; font-weight: 500;
+    color: var(--text); padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg2);
+  }
+
+  .compare th:first-child { border-radius: 8px 0 0 0; }
+  .compare th:last-child { border-radius: 0 8px 0 0; }
+
+  .compare td {
+    padding: 10px 14px; color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.6;
+  }
+
+  .compare tr:last-child td { border-bottom: none; }
+
+  .tag-msc {
+    font-size: 11px; font-weight: 500;
+    color: var(--accent); background: var(--accent-dim);
+    padding: 1px 7px; border-radius: 3px;
+    letter-spacing: 0.04em;
+  }
+
+  .tag-phd {
+    font-size: 11px; font-weight: 500;
+    color: var(--purple); background: var(--purple-dim);
+    padding: 1px 7px; border-radius: 3px;
+    letter-spacing: 0.04em;
+  }
+
+  /* SECTION CARDS for proposal structure */
+  .section-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+  }
+
+  .section-card-header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg3);
+  }
+
+  .section-num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 600;
+    color: var(--purple);
+    background: var(--purple-dim);
+    border: 1px solid var(--purple-border);
+    padding: 3px 9px; border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .section-card-header h3 {
+    margin: 0; font-size: 15px; color: var(--text);
+  }
+
+  .section-wordcount {
+    margin-left: auto;
+    font-size: 12px; color: var(--text-dim);
+    font-family: 'DM Sans', sans-serif;
+    white-space: nowrap;
+  }
+
+  .section-card-body {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .section-card-body p {
+    font-size: 14px; margin-bottom: 0.75rem;
+  }
+
+  .section-card-body p:last-child { margin-bottom: 0; }
+
+  .section-card-body ul {
+    margin: 0.5rem 0 0.75rem 1.1rem;
+  }
+
+  .section-card-body li {
+    font-size: 13px; color: var(--text-muted);
+    margin-bottom: 4px; line-height: 1.6;
+  }
+
+  .section-card-body li::marker { color: var(--purple); }
+
+  .key-q {
+    background: var(--bg3);
+    border-left: 2px solid var(--purple);
+    border-radius: 0 6px 6px 0;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    font-size: 13px; color: var(--text-muted);
+    font-style: italic;
+    line-height: 1.65;
+  }
+
+  /* REJECTION REASONS */
+  .reject-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .reject-item:last-child { border-bottom: none; }
+
+  .reject-icon {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--red-dim);
+    border: 1px solid rgba(232,93,93,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; flex-shrink: 0; margin-top: 2px;
+  }
+
+  .reject-text h4 {
+    font-size: 14px; font-weight: 500;
+    color: var(--text); margin-bottom: 4px;
+  }
+
+  .reject-text p {
+    font-size: 13px; margin-bottom: 0;
+    color: var(--text-muted); line-height: 1.65;
+  }
+
+  /* SUPERVISOR MATCH */
+  .match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 1.25rem 0;
+  }
+
+  .match-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+  }
+
+  .match-card h4 {
+    font-size: 13px; font-weight: 500;
+    color: var(--accent); margin-bottom: 6px;
+  }
+
+  .match-card p {
+    font-size: 13px; margin-bottom: 0;
+    color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* TEMPLATE BOX */
+  .template-box {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .template-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 10px;
+  }
+
+  .template-text {
+    font-size: 13px; color: var(--text-muted);
+    line-height: 1.85;
+  }
+
+  .template-text em {
+    color: var(--gold); font-style: normal;
+    background: var(--gold-dim);
+    padding: 1px 5px; border-radius: 3px;
+  }
+
+  /* CTA */
+  .cta-box {
+    background: var(--bg3);
+    border: 1px solid var(--accent-border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  .cta-box h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem; margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .cta-box p {
+    font-size: 14px; color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .btn-primary {
+    background: var(--accent); color: #071224;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 500;
+    padding: 11px 24px; border-radius: 7px;
+    border: none; cursor: pointer;
+    text-decoration: none; display: inline-block;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.88; }
+
+  /* FAQ */
+  .faq-item {
+    border-top: 1px solid var(--border);
+    padding: 1.25rem 0;
+  }
+
+  .faq-item:last-child { border-bottom: 1px solid var(--border); }
+
+  .faq-q {
+    font-size: 15px; font-weight: 500;
+    color: var(--text); margin-bottom: 0.5rem;
+  }
+
+  .faq-a {
+    font-size: 14px; color: var(--text-muted); line-height: 1.7;
+  }
+
+  /* RELATED */
+  .related-links {
+    margin: 2rem 0; display: flex;
+    flex-direction: column; gap: 8px;
+  }
+
+  .related-links a {
+    color: var(--accent); text-decoration: none;
+    font-size: 14px; transition: opacity 0.2s;
+  }
+
+  .related-links a:hover { opacity: 0.75; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem; text-align: center;
+    font-size: 12px; color: var(--text-dim);
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; }
+    article { padding: 3rem 1.25rem 4rem; }
+    .match-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "PhD 申请 Research Proposal 怎么写？完整攻略",
+  "description": "详解博士申请 Proposal 的结构、字数、评审标准，以及与 MSc Dissertation Proposal 的核心区别，附写作框架和拒信原因分析。",
+  "author": { "@type": "Organization", "name": "论文搭子来了" },
+  "datePublished": "2026-06-03",
+  "dateModified": "2026-06-03"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">论文搭子来了</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#how">如何使用</a></li>
+    <li><a href="../index.html#pricing">定价</a></li>
+    <li><a href="../index.html#chat" class="nav-cta">免费试用</a></li>
+  </ul>
+</nav>
+
+<article>
+
+<div class="article-label">PhD 申请专题</div>
+
+<h1>PhD 申请 Research Proposal<br>怎么写？完整攻略</h1>
+
+<div class="article-meta">2026年6月更新 · 适用于英国、澳洲、香港博士申请 · 阅读时间 15 分钟</div>
+
+<!-- HOOK -->
+
+<p>很多人申请 PhD 时，把 Research Proposal 当成硕士 Dissertation Proposal 的"加长版"来写——字数更多、文献更多、看起来更学术。</p>
+
+<p>这是一个根本性的误解，也是大多数申请失败的核心原因之一。</p>
+
+<p><strong>博士申请 Proposal 和硕士 Proposal 在本质上是两种不同的文件，服务于两个完全不同的目的。</strong>理解这个区别，是写好博士 Proposal 的第一步。</p>
+
+<div class="callout callout-purple">
+  <p><strong>本文适用于：</strong>正在申请英国、澳洲或港台大学 PhD / DPhil 学位，需要提交 Research Proposal 的申请者。如果你是硕士阶段需要提交 Dissertation Proposal，请读：<a href="research-proposal-guide.html" style="color:var(--accent);">→ Research Proposal 怎么写？从零到提交的完整指南</a></p>
+</div>
+
+<!-- SECTION 1: KEY DIFFERENCE -->
+
+<h2>一、最核心的区别：你在说服谁，说服他们什么</h2>
+
+<p>硕士 Dissertation Proposal 是提交给你的学院审核的——它主要证明你的计划在学术上是合理的、在时间和方法上是可行的。</p>
+
+<p>博士申请 Proposal 是提交给潜在导师和招生委员会的——它需要同时证明三件事：<strong>这个研究问题值得花3–5年去回答、你有能力完成这个研究、以及你的方向和这所学校的研究实力匹配</strong>。</p>
+
+<p>换句话说，博士 Proposal 不只是研究计划，它还是一份能力证明和一封"求职信"——你在向潜在导师展示：和你合作三年以上是值得的。</p>
+
+<table class="compare">
+  <thead>
+    <tr>
+      <th style="width:30%">维度</th>
+      <th><span class="tag-msc">MSc Proposal</span></th>
+      <th><span class="tag-phd">PhD Proposal</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>主要读者</strong></td>
+      <td>学院 Proposal 审核委员会</td>
+      <td>潜在导师 + 招生委员会</td>
+    </tr>
+    <tr>
+      <td><strong>核心目的</strong></td>
+      <td>证明计划合理、可行</td>
+      <td>证明研究价值 + 展示个人能力 + 争取导师接受</td>
+    </tr>
+    <tr>
+      <td><strong>字数</strong></td>
+      <td>500–1500 字（视学校要求）</td>
+      <td>1500–3000 字（多数学校 2000 字左右）</td>
+    </tr>
+    <tr>
+      <td><strong>文献深度</strong></td>
+      <td>5–10 篇，证明 Gap 存在即可</td>
+      <td>15–30 篇，需展示对领域的系统掌握</td>
+    </tr>
+    <tr>
+      <td><strong>Methodology</strong></td>
+      <td>说明方法，简要即可</td>
+      <td>需详细论证方法选择的学术依据</td>
+    </tr>
+    <tr>
+      <td><strong>理论贡献</strong></td>
+      <td>填补实证 Gap 即可</td>
+      <td>需明确说明对理论的推进或挑战</td>
+    </tr>
+    <tr>
+      <td><strong>个人定位</strong></td>
+      <td>不需要，学院统一分配导师</td>
+      <td>需要，通常需要在申请前联系意向导师</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- SECTION 2: STRUCTURE -->
+
+<h2>二、PhD Proposal 的标准结构与各部分写法</h2>
+
+<p>不同学校对格式的要求有所不同，但内容上大多包含以下七个部分。以下是每个部分的写作要点和字数参考（基于 2000 字的总字数）。</p>
+
+<!-- SECTION 1 -->
+<div class="section-card">
+  <div class="section-card-header">
+    <div class="section-num">§ 1</div>
+    <h3>Title（标题）</h3>
+    <span class="section-wordcount">— 不计入字数</span>
+  </div>
+  <div class="section-card-body">
+    <p>博士 Proposal 的标题需要比硕士更精准——它应该直接反映你的研究问题，而不只是研究方向。</p>
+    <div class="key-q">"A good PhD title tells you what the research is, not just what it's about."</div>
+    <p><strong>✗ 方向型标题：</strong>"ESG 与房地产市场的关系研究"</p>
+    <p><strong>✓ 问题型标题：</strong>"强制性ESG披露对英国上市REITs资本成本的影响：基于监管外生冲击的准自然实验"</p>
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section-card">
+  <div class="section-card-header">
+    <div class="section-num">§ 2</div>
+    <h3>Introduction / Background（背景与问题陈述）</h3>
+    <span class="section-wordcount">约 300 字</span>
+  </div>
+  <div class="section-card-body">
+    <p>用简洁的语言回答两个问题：这个研究领域的背景是什么？为什么现在是研究这个问题的合适时机？</p>
+    <p>开头要有吸引力——招生委员会一天可能要读几十份 Proposal，前三句话决定读者是否继续读下去。可以用一个数据、一个政策事件、或一个学术争论作为切入点。</p>
+    <ul>
+      <li>不要把 Introduction 写成"大水漫灌"式的背景介绍</li>
+      <li>结尾要引出你的研究问题，让读者自然过渡到下一部分</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section-card">
+  <div class="section-card-header">
+    <div class="section-num">§ 3</div>
+    <h3>Literature Review & Research Gap（文献综述与研究空白）</h3>
+    <span class="section-wordcount">约 500 字</span>
+  </div>
+  <div class="section-card-body">
+    <p>这是博士 Proposal 与硕士最显著的差别所在。博士的文献综述不是"我读了哪些书"，而是需要展示：<strong>你对整个领域的知识地图有掌握，并且能精准定位你的研究在这个地图上的位置</strong>。</p>
+    <p>写法上，通常按"从宏观到微观"的逻辑组织：先讲大的理论框架，再讲具体的实证研究，最后指向你的 Research Gap。</p>
+    <ul>
+      <li>引用的文献应覆盖领域内的经典论文 + 近3–5年的新进展</li>
+      <li>明确区分"已有研究做了什么"和"还没有人做什么"</li>
+      <li>Gap 的论证需要至少2–3种不同类型的 Gap 支撑（参考：<a href="research-gap-guide.html" style="color:var(--accent)">五种 Research Gap 类型</a>）</li>
+    </ul>
+    <div class="callout callout-warn" style="margin-top:1rem;">
+      <p><strong>常见错误：</strong>把文献综述写成"论文摘要大集合"——罗列了15篇论文各自讲了什么，但没有任何综合或批判性分析。招生委员会看的不是你读了多少，而是你能不能对这些文献提出自己的判断。</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section-card">
+  <div class="section-card-header">
+    <div class="section-num">§ 4</div>
+    <h3>Research Questions & Objectives（研究问题与目标）</h3>
+    <span class="section-wordcount">约 200 字</span>
+  </div>
+  <div class="section-card-body">
+    <p>博士的研究问题通常分两层：一个主研究问题（Main Research Question）+ 2–3个子问题（Sub-questions）。子问题是你分解主问题的方式，每个子问题对应论文的一个核心章节。</p>
+    <div class="key-q">主问题示例："ESG强制披露制度如何影响英国上市REITs的资本成本？"<br><br>
+    子问题1："强制披露前后，REITs的加权平均资本成本是否出现系统性变化？"<br>
+    子问题2："ESG披露质量与资本成本的关系在不同规模的REITs中是否存在异质性？"<br>
+    子问题3："这一关系的机制是什么——通过信息不对称渠道还是投资者偏好渠道？"</div>
+    <p>注意：子问题需要相互独立但共同服务于主问题，逻辑上像是"三把钥匙开同一把锁"。</p>
+  </div>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section-card">
+  <div class="section-card-header">
+    <div class="section-num">§ 5</div>
+    <h3>Theoretical Framework（理论框架）</h3>
+    <span class="section-wordcount">约 200 字</span>
+  </div>
+  <div class="section-card-body">
+    <p>这是硕士 Proposal 里通常不需要单独写、但博士 Proposal 里不能缺少的部分。</p>
+    <p>理论框架回答的问题是：<strong>你从哪个理论视角来理解和分析你的研究问题？</strong>它不是"我会用什么方法"（那是 Methodology），而是"我站在什么理论立场上"。</p>
+    <ul>
+      <li>选择 1–2 个核心理论（如信号理论、代理理论、制度理论），说明为什么这些理论适合解释你的研究问题</li>
+      <li>如果你计划挑战或拓展某个已有理论，在这里明确说明——这是博士研究最有价值的理论贡献类型</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECTION 6 -->
+<div class="section-card">
+  <div class="section-card-header">
+    <div class="section-num">§ 6</div>
+    <h3>Methodology（研究方法）</h3>
+    <span class="section-wordcount">约 300 字</span>
+  </div>
+  <div class="section-card-body">
+    <p>博士 Proposal 的 Methodology 需要比硕士更详细，并且<strong>需要论证为什么选择这个方法，而不只是陈述你要用什么方法</strong>。</p>
+    <ul>
+      <li><strong>研究设计：</strong>定量、定性、还是混合方法？为什么这个设计最适合你的研究问题？</li>
+      <li><strong>数据来源：</strong>什么数据？从哪里获取？样本范围和时间窗口如何确定？</li>
+      <li><strong>分析方法：</strong>具体用什么统计或分析工具？如何应对潜在的内生性/效度问题？</li>
+    </ul>
+    <p>这部分不需要写成完整的研究设计，但需要展示你已经认真思考过方法的可行性和学术严谨性。</p>
+  </div>
+</div>
+
+<!-- SECTION 7 -->
+<div class="section-card">
+  <div class="section-card-header">
+    <div class="section-num">§ 7</div>
+    <h3>Contribution & Significance（研究贡献与意义）</h3>
+    <span class="section-wordcount">约 200 字</span>
+  </div>
+  <div class="section-card-body">
+    <p>这部分是很多申请者写得最弱的地方，但对招生委员会来说却是判断这个研究"值不值得支持"的关键。</p>
+    <p>贡献需要分两个层面来写：</p>
+    <ul>
+      <li><strong>理论贡献：</strong>你的研究如何推进、修正或挑战现有理论？会让哪个领域的学者重新思考什么？</li>
+      <li><strong>实践贡献：</strong>你的发现对谁有用？政策制定者、行业从业者、还是监管机构？</li>
+    </ul>
+    <p>不要写成"本研究将填补文献空白"这种空洞的表述。要具体到：<em>哪个理论会因为你的研究而被怎样修正</em>。</p>
+  </div>
+</div>
+
+<!-- SECTION 3: SUPERVISOR -->
+
+<h2>三、申请 PhD 前，先联系潜在导师</h2>
+
+<p>这是英国、澳洲 PhD 申请和中国博士申请最大的流程差异之一：<strong>在多数英国和澳洲大学，你需要在正式提交申请之前，找到一位愿意接收你的导师</strong>。没有导师表示意向，很多学校不会接受你的申请，或者即使申请通过了也可能因为找不到导师而无法录取。</p>
+
+<p>这意味着 Research Proposal 其实有两个用途：一是作为正式申请材料，二是作为你联系潜在导师时的自我介绍材料。</p>
+
+<h3>如何找到合适的潜在导师？</h3>
+
+<div class="match-grid">
+  <div class="match-card">
+    <h4>研究方向匹配</h4>
+    <p>在意向学校的学院网站找每位老师的 Research Interests，寻找与你的 Research Question 有交叉的学者。</p>
+  </div>
+  <div class="match-card">
+    <h4>近期发表记录</h4>
+    <p>查看老师近3–5年的论文，确认他/她仍在活跃发表。近年没有新论文的老师可能不再接收新生。</p>
+  </div>
+  <div class="match-card">
+    <h4>现有学生情况</h4>
+    <p>有些导师已经带了很多 PhD 生，精力有限。可以在 LinkedIn 查看该老师现有和已毕业的学生情况。</p>
+  </div>
+  <div class="match-card">
+    <h4>资金与项目</h4>
+    <p>导师如果有在研项目（通过学校网站或 UKRI 数据库），可能有资助名额。提到与其项目的关联会增加回复率。</p>
+  </div>
+</div>
+
+<h3>联系导师的邮件怎么写？</h3>
+
+<div class="template-box">
+  <div class="template-label">导师联系邮件模板</div>
+  <p class="template-text">
+    Subject: PhD Enquiry – <em>研究方向关键词</em> / <em>你的名字</em><br><br>
+    Dear Dr / Professor <em>导师姓</em>,<br><br>
+    I am writing to enquire about PhD supervision opportunities in your group. I am a <em>当前学历背景</em> with a strong interest in <em>具体研究方向</em>.<br><br>
+    I have read your recent work on <em>具体引用一篇他/她的论文，写出论文名称</em>, and I believe my proposed research on <em>你的研究问题一句话概括</em> aligns closely with your expertise in <em>方向关键词</em>.<br><br>
+    I have attached a brief research proposal for your consideration. I would greatly appreciate the opportunity to discuss whether this topic is of interest to you.<br><br>
+    Thank you for your time.<br><br>
+    Yours sincerely,<br>
+    <em>你的全名</em>
+  </p>
+</div>
+
+<div class="callout callout-warn">
+  <p><strong>联系导师的几个注意事项：</strong></p>
+  <p>邮件正文控制在200字以内，附件放简版 Proposal（1页）。不要在第一封邮件里问奖学金或签证问题。如果两周没有回复，可以跟进一封简短的邮件（"I wanted to follow up on my previous email..."）。被拒绝或没有回复不代表你不行——换下一个导师继续联系。</p>
+</div>
+
+<!-- SECTION 4: REJECTION REASONS -->
+
+<h2>四、常见的拒信原因分析</h2>
+
+<p>了解博士 Proposal 被拒的原因，比了解"怎么写"更有指导意义。以下是招生委员会最常见的拒绝理由：</p>
+
+<div class="reject-item">
+  <div class="reject-icon">✗</div>
+  <div class="reject-text">
+    <h4>研究问题不够原创，已有大量类似研究</h4>
+    <p>最高频的拒绝原因。你需要能证明"这个具体问题在这个具体情境下还没有被充分回答"，而不只是在一个热门领域找一个稍微不同的角度。</p>
+  </div>
+</div>
+
+<div class="reject-item">
+  <div class="reject-icon">✗</div>
+  <div class="reject-text">
+    <h4>Proposal 显示申请者对文献掌握不足</h4>
+    <p>文献引用的都是教科书或10年前的论文，没有覆盖近年的重要研究。这会让导师担心你在文献调研上的能力。</p>
+  </div>
+</div>
+
+<div class="reject-item">
+  <div class="reject-icon">✗</div>
+  <div class="reject-text">
+    <h4>研究计划不可行：3–5年内完不成</h4>
+    <p>数据根本无法获取、访谈对象不切实际、或者研究问题过于宏大——这些都会让招生委员会认为申请者对博士研究的实际要求缺乏了解。</p>
+  </div>
+</div>
+
+<div class="reject-item">
+  <div class="reject-icon">✗</div>
+  <div class="reject-text">
+    <h4>贡献描述空洞，没有说清楚理论价值</h4>
+    <p>"填补文献空白"不是贡献，它是条件。真正的贡献是：填补了这个空白之后，学术界会因此更新什么认知。</p>
+  </div>
+</div>
+
+<div class="reject-item">
+  <div class="reject-icon">✗</div>
+  <div class="reject-text">
+    <h4>Proposal 与学校/导师的研究方向没有明显关联</h4>
+    <p>博士申请是双向匹配，导师接收学生是因为这个研究对他/她自己的学术议程有价值。如果你的 Proposal 和目标学校没有明显的契合点，成功率会大幅下降。</p>
+  </div>
+</div>
+
+<!-- MID CTA -->
+
+<div class="cta-box">
+  <h3>有了方向，但不知道怎么把它写成 Proposal？</h3>
+  <p>通过中文对话，帮你梳理研究方向、找到 Research Gap、形成可以提交的英文 Proposal 初稿。PhD 版本由学术导师人工审阅后交付。</p>
+  <a href="../index.html#chat" class="btn-primary">免费开始对话 →</a>
+</div>
+
+<!-- SECTION 5: FAQ -->
+
+<h2>常见问题</h2>
+
+<div class="faq-item">
+  <div class="faq-q">学校要求的字数是2000字，但我写了3000字，可以超吗？</div>
+  <div class="faq-a">严格不建议超出。字数限制是招生委员会对申请者表达能力的一种考察——能在2000字内把研究说清楚，本身就是一种能力。超字数可能直接导致 Proposal 被排除在审核之外（部分学校有明确规定）。实在需要保留细节，可以做成附录，但主体 Proposal 必须符合字数要求。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">我还没有硕士学位，可以直接申请 PhD 吗？</div>
+  <div class="faq-a">英国大多数学校要求申请者持有相关专业的硕士学位（或同等学历）。少数学校允许本科直升 PhD，但通常要求非常突出的本科成绩（一等荣誉学位）和已有的研究经验。具体要求以目标学校的官方招生条件为准。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">Proposal 里能不能先把研究方法写得很笼统，等录取了再细化？</div>
+  <div class="faq-a">可以保持一定的灵活性，但不能完全笼统。"本研究将使用定量方法"是太笼统的——招生委员会需要看到你已经认真思考过方法的适用性。比较好的处理方式是：在 Proposal 里说明你倾向于使用 X 方法，解释理由，并承认具体设计会在与导师充分讨论后确认。这既体现了思考深度，也展示了学术谦逊。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">联系了5个导师都没有回复，是不是代表我没希望？</div>
+  <div class="faq-a">完全不是。导师回复率低是普遍现象，尤其是知名学者邮件量很大。几个提高回复率的方法：确认导师目前正在招生（部分学者会在个人页面注明是否接受新申请）；在邮件里具体引用一篇他/她的论文；保持邮件简短精准；同时联系多所学校的多位导师。如果一所学校没有合适的导师，换学校比死守一所更有效率。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">我已经有了一个大方向，但不确定能不能做 PhD——有什么方法自测？</div>
+  <div class="faq-a">问自己三个问题：这个方向有没有可能获取到的数据或研究对象（可行性）？你能不能找到一个在现有文献中没有被充分回答的具体问题（原创性）？围绕这个问题做3–5年研究，你是否真的有持续的兴趣（动机）？三个问题都能正面回答，基本具备申请条件。如果对任何一个有疑虑，那就是需要继续打磨的地方。</div>
+</div>
+
+<!-- RELATED -->
+
+<h2>相关文章</h2>
+
+<div class="related-links">
+  <a href="research-proposal-guide.html">→ Research Proposal 怎么写？从零到提交的完整指南</a>
+  <a href="research-gap-guide.html">→ Research Gap 怎么找？五种类型详解 + 实操方法</a>
+  <a href="dissertation-topic-guide.html">→ 英国硕士 Dissertation 选题避坑指南：6个最常见错误</a>
+  <a href="literature-review-guide.html">→ Literature Review 怎么写？结构、步骤与 AI 使用避坑</a>
+  <a href="methodology-guide.html">→ Methodology 怎么选？定量、定性、混合方法完整对比</a>
+</div>
+
+</article>
+
+<footer>
+  © 2026 论文搭子来了 · AI Research Proposal 生成服务
+</footer>
+
+</body>
+</html>
