@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Literature Review 怎么写？结构、步骤与 AI 使用避坑（2026版）| 论文搭子来了</title>
+<meta name="description" content="Literature Review 不是论文摘要大集合。本文详解文献综述的结构、写作步骤、批判性分析方法，以及用 AI 写 Literature Review 的三大陷阱。适用于英国硕士 Dissertation 和博士论文。">
+<meta name="keywords" content="literature review 怎么写, 文献综述 写法, dissertation literature review, 硕士论文 文献综述, literature review 结构, AI 写文献综述, 留学论文 literature review">
+<link rel="alternate" hreflang="zh-CN" href="https://plinthosherryxu.github.io/proposal-bro/blog/literature-review-guide.html" />
+<link rel="canonical" href="https://plinthosherryxu.github.io/proposal-bro/blog/literature-review-guide.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0e1117;
+    --bg2: #151b27;
+    --bg3: #1c2333;
+    --border: rgba(255,255,255,0.08);
+    --border-hover: rgba(255,255,255,0.16);
+    --text: #e2e4e9;
+    --text-muted: #8891a8;
+    --text-dim: #4f5870;
+    --accent: #7eb8f7;
+    --accent-dim: rgba(126,184,247,0.10);
+    --accent-border: rgba(126,184,247,0.25);
+    --gold: #c9a96e;
+    --gold-dim: rgba(201,169,110,0.08);
+    --red: #e85d5d;
+    --red-dim: rgba(232,93,93,0.08);
+    --green: #5dcc8b;
+    --green-dim: rgba(93,204,139,0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans SC', 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(14,17,23,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px; color: var(--text);
+    text-decoration: none;
+  }
+
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+
+  .nav-links a {
+    color: var(--text-muted); text-decoration: none;
+    font-size: 13px; font-weight: 400; transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--accent); color: #071224 !important;
+    padding: 6px 16px; border-radius: 6px;
+    font-weight: 500 !important; font-size: 12px !important;
+  }
+
+  article {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .article-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .article-label::before {
+    content: ''; display: inline-block;
+    width: 16px; height: 1px; background: var(--accent);
+  }
+
+  article h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.2; color: var(--text);
+    margin-bottom: 1rem; letter-spacing: -0.01em;
+  }
+
+  .article-meta {
+    font-size: 13px; color: var(--text-dim);
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  article h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem; color: var(--text);
+    margin: 3rem 0 1rem; line-height: 1.3;
+  }
+
+  article h3 {
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--text); margin: 2rem 0 0.75rem;
+  }
+
+  article p {
+    color: var(--text-muted); margin-bottom: 1.25rem;
+    font-size: 15px;
+  }
+
+  article strong { color: var(--text); font-weight: 500; }
+
+  .callout {
+    background: var(--bg2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout-warn { border-left-color: var(--gold); }
+  .callout-red { border-left-color: var(--red); }
+  .callout-green { border-left-color: var(--green); }
+
+  /* STEP CARDS */
+  .step-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+  }
+
+  .step-card-head {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 0.75rem;
+  }
+
+  .step-badge {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    color: var(--accent);
+    font-size: 12px; font-weight: 500;
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-card-head h3 { margin: 0; font-size: 15px; }
+  .step-card p { font-size: 14px; margin-bottom: 0.5rem; }
+  .step-card p:last-child { margin-bottom: 0; }
+
+  /* BEFORE / AFTER WRITING STYLE */
+  .before-after {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 10px; margin: 1.25rem 0;
+  }
+
+  .ba-box {
+    background: var(--bg3);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+  }
+
+  .ba-label {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .ba-bad .ba-label { color: var(--red); }
+  .ba-good .ba-label { color: var(--green); }
+
+  .ba-box p {
+    font-size: 13px; margin-bottom: 0;
+    color: var(--text-muted); line-height: 1.65;
+    font-style: italic;
+  }
+
+  /* AI WARNING CARD */
+  .ai-warn-card {
+    background: var(--bg2);
+    border: 1px solid rgba(201,169,110,0.3);
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+  }
+
+  .ai-warn-header {
+    background: var(--gold-dim);
+    border-bottom: 1px solid rgba(201,169,110,0.2);
+    padding: 0.9rem 1.5rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .ai-warn-header h3 {
+    margin: 0; font-size: 14px;
+    color: var(--gold); font-weight: 500;
+  }
+
+  .ai-warn-body {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .ai-warn-body p {
+    font-size: 14px; margin-bottom: 0.75rem;
+  }
+
+  .ai-warn-body p:last-child { margin-bottom: 0; }
+
+  /* STRUCTURE DIAGRAM */
+  .structure-flow {
+    margin: 1.5rem 0;
+    display: flex; flex-direction: column; gap: 0;
+  }
+
+  .sf-item {
+    display: flex; gap: 0; align-items: stretch;
+  }
+
+  .sf-connector {
+    display: flex; flex-direction: column;
+    align-items: center; width: 40px; flex-shrink: 0;
+  }
+
+  .sf-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--accent); flex-shrink: 0;
+    margin-top: 18px;
+  }
+
+  .sf-line {
+    width: 2px; flex: 1; background: var(--border);
+    margin-top: 4px;
+  }
+
+  .sf-item:last-child .sf-line { display: none; }
+
+  .sf-box {
+    flex: 1;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 8px;
+  }
+
+  .sf-box h4 {
+    font-size: 14px; font-weight: 500;
+    color: var(--accent); margin-bottom: 4px;
+  }
+
+  .sf-box p {
+    font-size: 13px; margin-bottom: 0;
+    color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* COMPARE TABLE */
+  .compare {
+    width: 100%; border-collapse: collapse;
+    margin: 1.5rem 0; font-size: 14px;
+  }
+
+  .compare th {
+    text-align: left; font-weight: 500;
+    color: var(--text); padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg2);
+  }
+
+  .compare td {
+    padding: 10px 14px; color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top; line-height: 1.6;
+  }
+
+  .compare tr:last-child td { border-bottom: none; }
+
+  /* CTA */
+  .cta-box {
+    background: var(--bg3);
+    border: 1px solid var(--accent-border);
+    border-radius: 12px;
+    padding: 2rem; text-align: center;
+    margin: 3rem 0;
+  }
+
+  .cta-box h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem; margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .cta-box p { font-size: 14px; color: var(--text-muted); margin-bottom: 1.25rem; }
+
+  .btn-primary {
+    background: var(--accent); color: #071224;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 500;
+    padding: 11px 24px; border-radius: 7px;
+    border: none; cursor: pointer;
+    text-decoration: none; display: inline-block;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.88; }
+
+  /* FAQ */
+  .faq-item { border-top: 1px solid var(--border); padding: 1.25rem 0; }
+  .faq-item:last-child { border-bottom: 1px solid var(--border); }
+  .faq-q { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 0.5rem; }
+  .faq-a { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+  /* RELATED */
+  .related-links { margin: 2rem 0; display: flex; flex-direction: column; gap: 8px; }
+  .related-links a { color: var(--accent); text-decoration: none; font-size: 14px; transition: opacity 0.2s; }
+  .related-links a:hover { opacity: 0.75; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem; text-align: center;
+    font-size: 12px; color: var(--text-dim);
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; }
+    article { padding: 3rem 1.25rem 4rem; }
+    .before-after { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Literature Review 怎么写？结构、步骤与 AI 使用避坑",
+  "description": "详解文献综述的结构、写作步骤、批判性分析方法，以及用 AI 写 Literature Review 的三大陷阱。",
+  "author": { "@type": "Organization", "name": "论文搭子来了" },
+  "datePublished": "2026-06-04",
+  "dateModified": "2026-06-04"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">论文搭子来了</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#how">如何使用</a></li>
+    <li><a href="../index.html#pricing">定价</a></li>
+    <li><a href="../index.html#chat" class="nav-cta">免费试用</a></li>
+  </ul>
+</nav>
+
+<article>
+
+<div class="article-label">写作技巧</div>
+
+<h1>Literature Review 怎么写？<br>结构、步骤与 AI 使用避坑</h1>
+
+<div class="article-meta">2026年6月更新 · 适用于英国、澳洲硕士 Dissertation 及博士论文 · 阅读时间 14 分钟</div>
+
+<p>很多学生写 Literature Review 时，做的是同一件事：把读过的论文一篇一篇地总结，然后拼在一起。</p>
+
+<p>这不是 Literature Review，这是<strong>注释书目（Annotated Bibliography）</strong>。两者有本质区别。</p>
+
+<p>Literature Review 的核心任务不是"汇报你读了什么"，而是<strong>通过对已有研究的综合与批判，为你自己的研究问题建立学术依据</strong>。读者看完你的 Literature Review，应该能清楚地理解：这个领域已经知道了什么、还不知道什么、以及为什么你的研究是必要的。</p>
+
+<p>本文从结构、步骤、写法到 AI 使用注意事项，完整覆盖 Literature Review 的写作过程。</p>
+
+<div class="callout">
+  <p><strong>写 Literature Review 之前，建议先确认你的 Research Gap。</strong>因为 Literature Review 的逻辑终点就是你的 Gap——如果 Gap 还不清楚，Literature Review 就没有方向。先读：<a href="research-gap-guide.html" style="color:var(--accent)">→ Research Gap 怎么找？五种类型详解</a></p>
+</div>
+
+<!-- SECTION 1: WHAT IT IS -->
+
+<h2>一、Literature Review 的真正作用</h2>
+
+<p>在 Dissertation 或 Research Proposal 里，Literature Review 承担三个具体功能：</p>
+
+<p><strong>功能一：证明你理解这个领域的知识现状。</strong>导师和评审需要看到你对领域内的核心争论、主要理论框架、以及近年重要进展有系统性掌握。这是你"有资格做这个研究"的凭证。</p>
+
+<p><strong>功能二：通过批判性分析，指向你的 Research Gap。</strong>好的 Literature Review 是有方向感的——它不是漫无边际的知识汇总，而是有意识地引导读者走向"现有研究还没有回答的那个问题"。</p>
+
+<p><strong>功能三：为你的研究方法和理论框架提供学术依据。</strong>你为什么用这个理论？为什么选这个方法？答案都应该能在 Literature Review 里找到根基。</p>
+
+<!-- SECTION 2: STRUCTURE -->
+
+<h2>二、Literature Review 的组织结构</h2>
+
+<p>Literature Review 最常见的结构陷阱，是按照"每篇论文一段"来组织——这就是前面说的注释书目问题。正确的做法是<strong>按主题/议题组织，而不是按文献逐一介绍</strong>。</p>
+
+<p>一个有效的 Literature Review 通常遵循"漏斗形"逻辑：从宏观到微观，从领域共识到具体争议，最终收口到你的 Research Gap。</p>
+
+<div class="structure-flow">
+  <div class="sf-item">
+    <div class="sf-connector"><div class="sf-dot"></div><div class="sf-line"></div></div>
+    <div class="sf-box">
+      <h4>第一层：理论与概念框架</h4>
+      <p>介绍你的研究所依托的核心理论或概念，说明学术界对这些概念的界定和主要争议。这一层确立你的分析视角。</p>
+    </div>
+  </div>
+  <div class="sf-item">
+    <div class="sf-connector"><div class="sf-dot"></div><div class="sf-line"></div></div>
+    <div class="sf-box">
+      <h4>第二层：相关实证研究综述</h4>
+      <p>按主题梳理已有的实证研究，重点不是逐一介绍，而是归纳共识、指出分歧、识别规律。多篇文献应该被综合成判断，而不是逐条罗列。</p>
+    </div>
+  </div>
+  <div class="sf-item">
+    <div class="sf-connector"><div class="sf-dot"></div><div class="sf-line"></div></div>
+    <div class="sf-box">
+      <h4>第三层：现有研究的局限与空白</h4>
+      <p>基于前两层的综合，批判性指出现有研究在哪里存在不足——是方法局限、情境局限、理论局限，还是时间滞后？这就是你的 Research Gap。</p>
+    </div>
+  </div>
+  <div class="sf-item">
+    <div class="sf-connector"><div class="sf-dot"></div><div class="sf-line"></div></div>
+    <div class="sf-box">
+      <h4>收口：引出你的研究问题</h4>
+      <p>从 Gap 自然过渡到你的 Research Question——"因此，本研究旨在……"。读者读到这里，应该感觉你的研究问题的出现是水到渠成的。</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: HOW TO WRITE -->
+
+<h2>三、写作步骤：从读文献到成文</h2>
+
+<div class="step-card">
+  <div class="step-card-head">
+    <div class="step-badge">1</div>
+    <h3>搜集文献时，建立主题分类，不要只是堆文件</h3>
+  </div>
+  <p>在开始搜文献的时候，就同时建立一个简单的主题分类框架——比如"理论文献"、"实证研究（支持方）"、"实证研究（反对方）"、"方法论文献"。每读一篇，归入对应类别，顺手记下这篇文献在整体地图中的位置和你的判断。</p>
+  <p>这样做的好处是：写作时你不需要重新读一遍，直接按主题调用笔记就能成文。Zotero、Notion、或者简单的 Excel 表格都可以用来做这件事。</p>
+</div>
+
+<div class="step-card">
+  <div class="step-card-head">
+    <div class="step-badge">2</div>
+    <h3>写作时，从判断出发，不从论文出发</h3>
+  </div>
+  <p>这是从"注释书目"升级到"文献综述"的关键转变。</p>
+  <p>错误的写法：先想到某篇论文，然后写"Smith (2021) 研究了……"</p>
+  <p>正确的写法：先形成一个判断，然后用论文来支撑它——"现有研究普遍发现 ESG 与企业价值呈正相关（Smith, 2021; Jones, 2022; Lee, 2023），但这些研究大多集中于……"</p>
+  <p>前者是在介绍文献，后者是在用文献建立论点。学术写作需要的是后者。</p>
+</div>
+
+<div class="step-card">
+  <div class="step-card-head">
+    <div class="step-badge">3</div>
+    <h3>批判性分析：三个可以直接使用的问题</h3>
+  </div>
+  <p>批判性分析不是说某篇论文写得不好，而是对它的适用范围和局限做出判断。读每篇文献时，问自己这三个问题：</p>
+  <p><strong>① 这个结论在什么条件下成立？</strong>（特定国家？特定行业？特定时期？）超出这些条件，结论还适用吗？</p>
+  <p><strong>② 这个研究的方法有什么局限？</strong>（横截面数据无法证明因果？样本量太小？自我报告数据有偏？）</p>
+  <p><strong>③ 这个结论和其他研究的结论是否一致？</strong>如果有分歧，分歧的原因可能是什么？</p>
+</div>
+
+<div class="step-card">
+  <div class="step-card-head">
+    <div class="step-badge">4</div>
+    <h3>避免"描述陷阱"：每段都要有你的声音</h3>
+  </div>
+  <p>很多学生写出来的 Literature Review，每一句话都是在描述别人的研究，看不到作者自己的判断。导师读完后说"缺乏批判性思维"，原因往往就在这里。</p>
+  <p>一个简单的自查方法：通读你写的 Literature Review，找出所有以"[作者名] 研究了……""[作者名] 发现……""[作者名] 认为……"开头的句子。如果这类句子占了 80% 以上，说明你的声音还不够。</p>
+  <p>目标是：每隔 2–3 句描述，就有一句你自己的综合判断或批评。</p>
+</div>
+
+<!-- SECTION 4: BEFORE / AFTER -->
+
+<h2>四、同一段内容，两种写法的对比</h2>
+
+<p>用同一批文献，展示"注释书目式"写法和"综述式"写法的区别：</p>
+
+<div class="before-after">
+  <div class="ba-box ba-bad">
+    <div class="ba-label">✗ 注释书目式（错误）</div>
+    <p>"Smith (2020) 研究了ESG与企业价值的关系，发现正相关。Jones (2021) 使用面板数据研究了同一问题，也发现正相关。Lee (2022) 研究了英国市场，结论类似。但Wang (2023) 的研究发现了负相关关系。"</p>
+  </div>
+  <div class="ba-box ba-good">
+    <div class="ba-label">✓ 综述式（正确）</div>
+    <p>"多数实证研究支持ESG与企业价值正相关（Smith, 2020; Jones, 2021; Lee, 2022），但Wang (2023) 的发现构成例外。这一分歧可能源于Wang研究的新兴市场情境——在信息披露制度尚不完善的市场中，ESG信号的可信度本身存疑，从而削弱了其与价值的正向关系。"</p>
+  </div>
+</div>
+
+<p>两段引用了同样的四篇文献，但第二段有综合、有判断、有对分歧原因的分析——这才是文献综述应该有的样子。</p>
+
+<!-- SECTION 5: AI WARNING -->
+
+<h2>五、用 AI 写 Literature Review：三个必须知道的陷阱</h2>
+
+<p>越来越多的学生在用 AI 辅助写 Literature Review——这件事本身没有问题，但有三个陷阱如果不了解，后果会很严重。</p>
+
+<div class="ai-warn-card">
+  <div class="ai-warn-header">
+    <h3>⚠ 陷阱一：AI 会捏造不存在的文献引用</h3>
+  </div>
+  <div class="ai-warn-body">
+    <p>这是目前 AI 工具最致命的问题，学术界称为"幻觉引用"（Hallucinated Citations）。AI 会生成看起来完全真实的文献引用——有作者名、有期刊名、有年份、有标题——但这篇论文根本不存在。</p>
+    <p>这不是偶发错误，而是语言模型的系统性局限。它生成的是"看起来像真实引用的文字"，而不是真正核实过的来源。</p>
+    <p><strong>后果：</strong>如果你直接把 AI 给的引用放进论文，导师或评审一旦查证，发现引用不存在，轻则被要求重写，重则触发学术不端调查。</p>
+    <p><strong>解法：</strong>AI 给出的每一条引用，都必须在 Google Scholar、OpenAlex 或学校数据库里逐一核实——确认论文存在、标题正确、作者正确、年份正确、期刊正确。没有例外。</p>
+  </div>
+</div>
+
+<div class="ai-warn-card">
+  <div class="ai-warn-header">
+    <h3>⚠ 陷阱二：AI 的知识有截止日期，且无法访问付费数据库</h3>
+  </div>
+  <div class="ai-warn-body">
+    <p>大多数 AI 工具的训练数据有知识截止日期，通常落后现实 1–2 年。学术领域的进展很快，2024–2025 年发表的重要论文，AI 可能完全不知道。</p>
+    <p>更重要的是：绝大多数学术论文发表在付费数据库里（Scopus、Web of Science、各学科顶刊），AI 工具无法访问这些内容。它"知道"的只是公开可以获取的部分，这在学术文献里只是很小的比例。</p>
+    <p><strong>解法：</strong>把 AI 当作帮你梳理思路和组织框架的工具，但文献本身必须通过你学校图书馆订阅的数据库自己检索。OpenAlex 是一个完全免费的学术数据库，覆盖范围较广，可以作为补充。</p>
+  </div>
+</div>
+
+<div class="ai-warn-card">
+  <div class="ai-warn-header">
+    <h3>⚠ 陷阱三：AI 生成的综述缺乏真正的批判性分析</h3>
+  </div>
+  <div class="ai-warn-body">
+    <p>AI 非常擅长生成流畅的描述性文字，但它生成的 Literature Review 往往停留在"描述每篇文献说了什么"——也就是前面说的注释书目问题。它很少能提供真正有深度的批判性判断，因为批判性分析需要你对这个领域的背景知识和研究情境有真实的理解。</p>
+    <p>更大的问题是：如果你把 AI 生成的内容不加修改地提交，导师会看出来——不是因为文字风格，而是因为内容缺乏针对你具体研究问题的分析深度。</p>
+    <p><strong>解法：</strong>把 AI 生成的内容当成初稿框架，然后根据你自己读文献后的判断，逐段加入你的批判性分析和综合判断。你的声音必须在里面。</p>
+  </div>
+</div>
+
+<div class="callout callout-green">
+  <p><strong>AI 真正适合用在哪里：</strong>帮你梳理某个主题下的主要观点脉络（作为参考，不作为引用来源）；帮你把笔记整理成段落初稿；帮你改写表达太生硬的句子；帮你检查逻辑连贯性。这些用法可以大幅提高效率，同时规避上面的三个陷阱。</p>
+</div>
+
+<!-- CTA -->
+
+<div class="cta-box">
+  <h3>Literature Review 写完了，但还没找到 Research Gap？</h3>
+  <p>通过中文 AI 对话，帮你从已有的文献阅读出发，系统识别 Research Gap，形成可以提交的 Research Proposal。全程免费开始。</p>
+  <a href="../index.html#chat" class="btn-primary">免费开始对话 →</a>
+</div>
+
+<!-- SECTION 6: FAQ -->
+
+<h2>常见问题</h2>
+
+<div class="faq-item">
+  <div class="faq-q">Literature Review 应该引用多少篇文献？</div>
+  <div class="faq-a">没有固定标准，但有参考范围：硕士 Dissertation 的 Literature Review 通常 20–40 篇，PhD 论文通常 50–100 篇。更重要的是质量而不是数量——引用 25 篇核心文献并有深度分析，远好过引用 60 篇但只是逐一罗列。同一个论点下不需要堆砌超过 4–5 篇文献。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">只能引用同行评审期刊论文吗？可以引用书、报告或网页吗？</div>
+  <div class="faq-a">同行评审期刊论文是最受认可的来源，应该占绝大多数。学术专著（尤其是经典教材和理论著作）也完全可以引用。政府报告、行业白皮书、国际组织发布的数据在特定研究中是合理的一手资料。普通网页、新闻报道、Wikipedia 不应作为学术引用来源——你可以用它们帮助自己理解背景，但不要出现在引用列表里。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">文献的发表年份有限制吗？能不能引用2010年的论文？</div>
+  <div class="faq-a">没有硬性的年份截止，但一般建议以近5–10年的文献为主，同时保留领域内影响深远的经典文献（无论年份）。如果你的研究方向发展很快（如人工智能、ESG监管），文献的时效性要求会更高。如果大量引用超过15年的论文而没有合理理由，导师可能会质疑你的文献检索是否全面。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">Literature Review 和 Research Proposal 里的 Literature Review 一样吗？</div>
+  <div class="faq-a">目的相同，但篇幅和深度不同。Proposal 里的 Literature Review 是压缩版——通常只需要 300–600 字，重点是证明 Gap 存在。Dissertation 正文里的 Literature Review 是完整版，需要系统性覆盖领域的知识地图，通常占全文字数的 20%–30%。两者的写作逻辑是一致的，只是详略不同。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">导师说我的 Literature Review "too descriptive"，怎么改？</div>
+  <div class="faq-a">这是最常见的反馈之一。改的方法：找出所有以"[作者] 研究了……发现……"开头的句子，把它们改写成"现有研究表明……（Smith, 2021; Jones, 2022）"，然后在段落末尾加上你自己的判断句——"然而，这些研究均未考虑……"或"这一共识在……情境下可能不成立，因为……"。每个段落都要有你的综合性论断，不能只是文献描述。</div>
+</div>
+
+<!-- RELATED -->
+
+<h2>相关文章</h2>
+
+<div class="related-links">
+  <a href="research-proposal-guide.html">→ Research Proposal 怎么写？从零到提交的完整指南</a>
+  <a href="research-gap-guide.html">→ Research Gap 怎么找？五种类型详解 + 实操方法</a>
+  <a href="dissertation-topic-guide.html">→ 英国硕士 Dissertation 选题避坑指南</a>
+  <a href="phd-proposal-guide.html">→ PhD 申请 Research Proposal 写作攻略</a>
+</div>
+
+</article>
+
+<footer>
+  © 2026 论文搭子来了 · AI Research Proposal 生成服务
+</footer>
+
+</body>
+</html>
