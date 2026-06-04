@@ -492,6 +492,59 @@
     .hero { min-height: 80vh; }
   }
 
+  /* BLOG SECTION */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    margin-top: 0;
+  }
+
+  .blog-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.4rem 1.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .blog-card:hover {
+    border-color: var(--accent-border);
+    background: var(--bg3);
+  }
+
+  .blog-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .blog-card h3 {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .blog-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .blog-arrow {
+    font-size: 12px;
+    color: var(--accent);
+    margin-top: auto;
+    padding-top: 4px;
+  }
+
   /* CHAT TABS */
   .chat-tabs {
     display: flex;
@@ -542,6 +595,7 @@
     <li><a href="#how">如何使用</a></li>
     <li><a href="#pricing">定价</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="#blog">学习资源</a></li>
     <li><a href="#chat">开始对话</a></li>
     <li><a href="#chat" class="nav-cta">立即开始</a></li>
   </ul>
@@ -713,6 +767,54 @@
       <div class="faq-q">如果对结果不满意怎么办？</div>
       <div class="faq-a">如果 Proposal 的方向与对话中确认的方向不符，我们会免费修改。如果想换一个完全不同的研究方向重新生成，需要按正价再次付款。</div>
     </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- BLOG / LEARNING RESOURCES -->
+<section id="blog">
+  <div class="section-label">学习资源</div>
+  <h2 class="section-title">写好 Proposal，从这里开始</h2>
+  <p class="section-sub">从选题到方法论，覆盖 Dissertation 和 PhD 申请全流程。免费阅读，无需注册。</p>
+
+  <div class="blog-grid">
+    <a href="blog/research-proposal-guide.html" class="blog-card">
+      <span class="blog-tag">完整指南</span>
+      <h3>Research Proposal 怎么写？从零到提交的完整指南</h3>
+      <p>六个部分逐一拆解，每部分的任务和写法要点，附结构框架。</p>
+      <span class="blog-arrow">阅读全文 →</span>
+    </a>
+    <a href="blog/research-gap-guide.html" class="blog-card">
+      <span class="blog-tag">核心技能</span>
+      <h3>Research Gap 怎么找？五种类型详解 + 实操方法</h3>
+      <p>五种 Gap 类型的识别信号，读文献时该盯哪里，以及写进 Proposal 的英文句式模板。</p>
+      <span class="blog-arrow">阅读全文 →</span>
+    </a>
+    <a href="blog/dissertation-topic-guide.html" class="blog-card">
+      <span class="blog-tag">避坑指南</span>
+      <h3>英国硕士 Dissertation 选题避坑：6个最常见错误</h3>
+      <p>题目太大、数据拿不到、选题和专业脱节……每个坑附具体解法和自查清单。</p>
+      <span class="blog-arrow">阅读全文 →</span>
+    </a>
+    <a href="blog/phd-proposal-guide.html" class="blog-card">
+      <span class="blog-tag">PhD 申请</span>
+      <h3>PhD 申请 Research Proposal 怎么写？完整攻略</h3>
+      <p>博士和硕士 Proposal 的本质区别，七个结构模块写法，以及套磁邮件模板。</p>
+      <span class="blog-arrow">阅读全文 →</span>
+    </a>
+    <a href="blog/literature-review-guide.html" class="blog-card">
+      <span class="blog-tag">写作技巧</span>
+      <h3>Literature Review 怎么写？结构、步骤与 AI 使用避坑</h3>
+      <p>文献综述 vs 注释书目的本质区别，批判性分析方法，以及 AI 幻觉引用的三大陷阱。</p>
+      <span class="blog-arrow">阅读全文 →</span>
+    </a>
+    <a href="blog/methodology-guide.html" class="blog-card">
+      <span class="blog-tag">研究方法</span>
+      <h3>Methodology 怎么选？定量、定性、混合方法完整对比</h3>
+      <p>五步决策框架，从你的 Research Question 出发选对方法，附常见写法错误对比。</p>
+      <span class="blog-arrow">阅读全文 →</span>
+    </a>
   </div>
 </section>
 
