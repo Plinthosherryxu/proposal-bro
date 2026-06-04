@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology 怎么选？定量、定性、混合方法完整对比（2026版）| 论文搭子来了</title>
+<meta name="description" content="Methodology 怎么选？本文详解定量、定性、混合方法的核心区别和适用条件，5个步骤教你根据研究问题选对方法，附常见方法选择错误分析。适用于英国硕士 Dissertation 和博士论文。">
+<meta name="keywords" content="methodology 怎么选, 定量定性研究方法, dissertation methodology, 研究方法 选择, 硕士论文 methodology, qualitative quantitative, 混合方法研究, 留学论文 研究方法">
+<link rel="alternate" hreflang="zh-CN" href="https://plinthosherryxu.github.io/proposal-bro/blog/methodology-guide.html" />
+<link rel="canonical" href="https://plinthosherryxu.github.io/proposal-bro/blog/methodology-guide.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0e1117;
+    --bg2: #151b27;
+    --bg3: #1c2333;
+    --border: rgba(255,255,255,0.08);
+    --border-hover: rgba(255,255,255,0.16);
+    --text: #e2e4e9;
+    --text-muted: #8891a8;
+    --text-dim: #4f5870;
+    --accent: #7eb8f7;
+    --accent-dim: rgba(126,184,247,0.10);
+    --accent-border: rgba(126,184,247,0.25);
+    --gold: #c9a96e;
+    --gold-dim: rgba(201,169,110,0.08);
+    --red: #e85d5d;
+    --red-dim: rgba(232,93,93,0.08);
+    --green: #5dcc8b;
+    --green-dim: rgba(93,204,139,0.08);
+    --teal: #5dccc4;
+    --teal-dim: rgba(93,204,196,0.10);
+    --teal-border: rgba(93,204,196,0.25);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans SC', 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(14,17,23,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px; color: var(--text);
+    text-decoration: none;
+  }
+
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+
+  .nav-links a {
+    color: var(--text-muted); text-decoration: none;
+    font-size: 13px; font-weight: 400; transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--accent); color: #071224 !important;
+    padding: 6px 16px; border-radius: 6px;
+    font-weight: 500 !important; font-size: 12px !important;
+  }
+
+  article {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .article-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .article-label::before {
+    content: ''; display: inline-block;
+    width: 16px; height: 1px; background: var(--accent);
+  }
+
+  article h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.2; color: var(--text);
+    margin-bottom: 1rem; letter-spacing: -0.01em;
+  }
+
+  .article-meta {
+    font-size: 13px; color: var(--text-dim);
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  article h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem; color: var(--text);
+    margin: 3rem 0 1rem; line-height: 1.3;
+  }
+
+  article h3 {
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--text); margin: 2rem 0 0.75rem;
+  }
+
+  article p {
+    color: var(--text-muted); margin-bottom: 1.25rem;
+    font-size: 15px;
+  }
+
+  article strong { color: var(--text); font-weight: 500; }
+
+  .callout {
+    background: var(--bg2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout-warn { border-left-color: var(--gold); }
+  .callout-red { border-left-color: var(--red); }
+  .callout-green { border-left-color: var(--green); }
+
+  /* METHOD CARDS — three columns */
+  .method-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 1.5rem 0;
+  }
+
+  .method-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  .method-card-label {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 4px;
+    display: inline-block; align-self: flex-start;
+  }
+
+  .label-quant { color: var(--accent); background: var(--accent-dim); }
+  .label-qual { color: var(--green); background: var(--green-dim); }
+  .label-mixed { color: var(--teal); background: var(--teal-dim); }
+
+  .method-card h3 {
+    margin: 0; font-size: 15px; color: var(--text);
+  }
+
+  .method-card p {
+    font-size: 13px; margin-bottom: 0;
+    color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* DECISION STEPS */
+  .decision-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+  }
+
+  .decision-head {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 0.75rem;
+  }
+
+  .decision-badge {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    color: var(--accent);
+    font-size: 12px; font-weight: 500;
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .decision-head h3 { margin: 0; font-size: 15px; }
+  .decision-card p { font-size: 14px; margin-bottom: 0.6rem; }
+  .decision-card p:last-child { margin-bottom: 0; }
+
+  .decision-q {
+    background: var(--bg3);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    font-size: 13px; color: var(--text-muted);
+    font-style: italic; line-height: 1.65;
+  }
+
+  /* COMPARE TABLE */
+  .compare {
+    width: 100%; border-collapse: collapse;
+    margin: 1.5rem 0; font-size: 13px;
+  }
+
+  .compare th {
+    text-align: left; font-weight: 500;
+    color: var(--text); padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg2);
+  }
+
+  .compare td {
+    padding: 10px 12px; color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top; line-height: 1.6;
+  }
+
+  .compare tr:last-child td { border-bottom: none; }
+
+  .td-quant { color: var(--accent); }
+  .td-qual { color: var(--green); }
+  .td-mixed { color: var(--teal); }
+
+  /* MISTAKE CARDS */
+  .mistake-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .mistake-icon {
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--red-dim);
+    border: 1px solid rgba(232,93,93,0.3);
+    color: var(--red);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; flex-shrink: 0; margin-top: 2px;
+    font-weight: 600;
+  }
+
+  .mistake-text h4 {
+    font-size: 14px; font-weight: 500;
+    color: var(--text); margin-bottom: 6px;
+  }
+
+  .mistake-text p {
+    font-size: 13px; margin-bottom: 0;
+    color: var(--text-muted); line-height: 1.65;
+  }
+
+  /* ONTOLOGY LADDER */
+  .onto-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    gap: 8px; margin-bottom: 8px;
+    align-items: start;
+  }
+
+  .onto-label {
+    font-size: 12px; font-weight: 500;
+    color: var(--text-dim); padding-top: 10px;
+    text-align: right; padding-right: 12px;
+  }
+
+  .onto-cell {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 0.75rem 1rem;
+    font-size: 13px; color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  .onto-cell strong { color: var(--text); font-size: 12px; display: block; margin-bottom: 3px; }
+
+  /* CTA */
+  .cta-box {
+    background: var(--bg3);
+    border: 1px solid var(--accent-border);
+    border-radius: 12px;
+    padding: 2rem; text-align: center;
+    margin: 3rem 0;
+  }
+
+  .cta-box h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem; margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .cta-box p { font-size: 14px; color: var(--text-muted); margin-bottom: 1.25rem; }
+
+  .btn-primary {
+    background: var(--accent); color: #071224;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 500;
+    padding: 11px 24px; border-radius: 7px;
+    border: none; cursor: pointer;
+    text-decoration: none; display: inline-block;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.88; }
+
+  /* FAQ */
+  .faq-item { border-top: 1px solid var(--border); padding: 1.25rem 0; }
+  .faq-item:last-child { border-bottom: 1px solid var(--border); }
+  .faq-q { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 0.5rem; }
+  .faq-a { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+  /* RELATED */
+  .related-links { margin: 2rem 0; display: flex; flex-direction: column; gap: 8px; }
+  .related-links a { color: var(--accent); text-decoration: none; font-size: 14px; transition: opacity 0.2s; }
+  .related-links a:hover { opacity: 0.75; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem; text-align: center;
+    font-size: 12px; color: var(--text-dim);
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; }
+    article { padding: 3rem 1.25rem 4rem; }
+    .method-grid { grid-template-columns: 1fr; }
+    .onto-row { grid-template-columns: 80px 1fr; }
+    .onto-row .onto-cell:last-child { display: none; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Methodology 怎么选？定量、定性、混合方法完整对比",
+  "description": "详解定量、定性、混合方法的核心区别和适用条件，5个步骤选对研究方法，附常见错误分析。",
+  "author": { "@type": "Organization", "name": "论文搭子来了" },
+  "datePublished": "2026-06-04",
+  "dateModified": "2026-06-04"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">论文搭子来了</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#how">如何使用</a></li>
+    <li><a href="../index.html#pricing">定价</a></li>
+    <li><a href="../index.html#chat" class="nav-cta">免费试用</a></li>
+  </ul>
+</nav>
+
+<article>
+
+<div class="article-label">研究方法</div>
+
+<h1>Methodology 怎么选？<br>定量、定性、混合方法完整对比</h1>
+
+<div class="article-meta">2026年6月更新 · 适用于英国、澳洲硕士 Dissertation 及博士论文 · 阅读时间 13 分钟</div>
+
+<p>"我应该用定量还是定性方法？"</p>
+
+<p>这是学生在确定 Research Question 之后最常问的问题。但这个问题本身就有一个隐藏的误解——<strong>方法不是你"选"的，而是由你的研究问题"决定"的</strong>。</p>
+
+<p>很多学生选方法的逻辑是反的：先选一个自己熟悉或觉得"听起来更学术"的方法，再倒推研究问题去配合。这就是为什么 Proposal 里的 Methodology 部分最容易被导师打回来——方法和问题之间没有逻辑连接。</p>
+
+<p>本文帮你建立正确的方法选择逻辑：从研究问题出发，一步步确定你的方法。</p>
+
+<!-- SECTION 1: THREE APPROACHES -->
+
+<h2>一、三种研究取向：先理解本质区别</h2>
+
+<p>在讲"怎么选"之前，需要先弄清楚定量、定性、混合方法在本质上的区别——它们不只是"用数据还是用访谈"的区别，而是对"什么是知识、如何产生知识"有不同的哲学立场。</p>
+
+<div class="method-grid">
+  <div class="method-card">
+    <span class="method-card-label label-quant">定量</span>
+    <h3>Quantitative</h3>
+    <p>用数字测量现象，通过统计分析检验变量之间的关系。预设假设，通过数据验证或否定。</p>
+    <p style="margin-top:8px; color:var(--accent); font-size:12px;">适合回答：多少？有没有关系？影响程度如何？</p>
+  </div>
+  <div class="method-card">
+    <span class="method-card-label label-qual">定性</span>
+    <h3>Qualitative</h3>
+    <p>通过文字、语言、观察理解现象的意义和背后的逻辑。不预设假设，从数据中归纳理论。</p>
+    <p style="margin-top:8px; color:var(--green); font-size:12px;">适合回答：为什么？怎么发生的？有什么意义？</p>
+  </div>
+  <div class="method-card">
+    <span class="method-card-label label-mixed">混合</span>
+    <h3>Mixed Methods</h3>
+    <p>同时使用定量和定性方法，用两种方法相互补充，获得更完整的理解。</p>
+    <p style="margin-top:8px; color:var(--teal); font-size:12px;">适合回答：多少 + 为什么？规律 + 机制？</p>
+  </div>
+</div>
+
+<p>一个更实用的理解方式：<strong>定量方法告诉你"发生了什么"，定性方法告诉你"为什么会发生"</strong>。如果你的研究问题需要同时回答这两层，混合方法才是合理选择——而不是因为"想做得更全面"就用混合方法。</p>
+
+<!-- SECTION 2: PHILOSOPHY -->
+
+<h2>二、哲学立场：Research Onion 的第一层</h2>
+
+<p>很多学校要求在 Methodology 章节里讨论你的研究哲学（Research Philosophy）。这对中国留学生来说通常是最陌生的部分，但它其实不难理解。</p>
+
+<p>常见的两种立场：</p>
+
+<div class="onto-row">
+  <div class="onto-label">本体论</div>
+  <div class="onto-cell">
+    <strong>实证主义 Positivism</strong>
+    社会现实是客观存在的，可以被测量和验证。世界有规律，研究的任务是发现这些规律。→ 通常对应定量方法
+  </div>
+  <div class="onto-cell">
+    <strong>解释主义 Interpretivism</strong>
+    社会现实是由人的主观经验和意义构建的，没有唯一客观的真相。→ 通常对应定性方法
+  </div>
+</div>
+
+<div class="callout callout-warn">
+  <p><strong>常见误区：</strong>很多学生以为"用了数据就是实证主义"，其实不对。哲学立场决定的是你对"什么是可信的知识"的根本态度，方法只是工具。在 Methodology 章节里，你需要先说明哲学立场，再解释方法选择——两者要保持一致。</p>
+</div>
+
+<p>如果你觉得哲学部分太抽象，一个简化的处理方式是：<strong>先确定你的方法（定量/定性），再倒推匹配的哲学立场</strong>，然后在 Methodology 章节里用 2–3 句话简要说明。绝大多数硕士论文不需要在这里花费大量篇幅。</p>
+
+<!-- SECTION 3: DECISION STEPS -->
+
+<h2>三、五步选出适合你的方法</h2>
+
+<div class="decision-card">
+  <div class="decision-head">
+    <div class="decision-badge">1</div>
+    <h3>看你的 Research Question 里的关键动词</h3>
+  </div>
+  <p>你的研究问题里用的是哪类动词？这是最快速的判断方式。</p>
+  <div class="decision-q">
+    "影响……的因素有哪些？" / "X 与 Y 之间是否存在关系？" / "X 对 Y 的影响程度如何？"
+    → 这类问题需要测量和统计 → <strong style="color:var(--accent)">定量</strong>
+  </div>
+  <div class="decision-q">
+    "人们如何理解……？" / "……是怎么发生的？" / "……背后的原因是什么？"
+    → 这类问题需要理解意义和过程 → <strong style="color:var(--green)">定性</strong>
+  </div>
+  <div class="decision-q">
+    "X 对 Y 有多大影响，以及这种影响通过什么机制发生？"
+    → 同时需要测量规律和理解机制 → <strong style="color:var(--teal)">混合</strong>（慎用，见下文）
+  </div>
+</div>
+
+<div class="decision-card">
+  <div class="decision-head">
+    <div class="decision-badge">2</div>
+    <h3>确认数据的可获得性</h3>
+  </div>
+  <p>方法选择的第二个约束条件是数据。无论你的研究问题多么适合某种方法，如果数据拿不到，这个方法就无法执行。</p>
+  <p><strong>定量方法需要：</strong>可量化的数据集——企业财务数据、调查问卷数据、政府统计数据、公开数据库。关键问题：这些数据你现在就能访问到吗？</p>
+  <p><strong>定性方法需要：</strong>访谈对象、案例文本、政策文件、观察记录。关键问题：你有能力在规定时间内联系到足够数量的访谈对象吗？</p>
+</div>
+
+<div class="decision-card">
+  <div class="decision-head">
+    <div class="decision-badge">3</div>
+    <h3>评估你的方法能力</h3>
+  </div>
+  <p>你在课程中实际学过并操作过哪些分析方法？这是一个务实的问题，不是能力高低的判断。</p>
+  <p>定量方法的常用工具包括 SPSS、Stata、R、Python——如果你没有基础，4个月内从零学会并正确应用是相当有挑战的。定性方法需要扎实的访谈设计、编码分析能力，同样需要学习成本。</p>
+  <p>选你<strong>有把握执行好</strong>的方法，而不是看起来更高级的方法。</p>
+</div>
+
+<div class="decision-card">
+  <div class="decision-head">
+    <div class="decision-badge">4</div>
+    <h3>看你的领域的主流方法是什么</h3>
+  </div>
+  <p>不同学科领域有不同的方法论传统。在你的领域里，主流的顶刊论文用的是什么方法？</p>
+  <p>这不是说你必须跟随主流，而是：在你的 Methodology 章节里，你需要论证你的方法选择——如果你选了一个在你的领域里不常见的方法，你需要额外解释为什么。如果你选了领域内的主流方法，论证负担会轻很多。</p>
+</div>
+
+<div class="decision-card">
+  <div class="decision-head">
+    <div class="decision-badge">5</div>
+    <h3>混合方法：只在真正需要时用</h3>
+  </div>
+  <p>混合方法听起来很全面，但它的执行难度是单一方法的两倍以上——你需要同时设计和执行两套数据收集和分析流程，并且在最后整合两部分发现。</p>
+  <p>对于一年制硕士来说，<strong>混合方法通常不是好的选择</strong>，除非你的研究问题确实需要同时回答"规律"和"机制"两层，并且你有充足的时间和数据资源。如果你选混合方法只是觉得"听起来更全面"，这通常会让你陷入两头都做不好的困境。</p>
+</div>
+
+<!-- SECTION 4: DETAILED COMPARE TABLE -->
+
+<h2>四、三种方法详细对比</h2>
+
+<table class="compare">
+  <thead>
+    <tr>
+      <th style="width:22%">维度</th>
+      <th><span class="td-quant">定量 Quantitative</span></th>
+      <th><span class="td-qual">定性 Qualitative</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>研究目的</strong></td>
+      <td>验证假设、测量关系、推断规律</td>
+      <td>理解意义、探索过程、归纳理论</td>
+    </tr>
+    <tr>
+      <td><strong>数据形式</strong></td>
+      <td>数字、统计量、可量化指标</td>
+      <td>文字、访谈记录、文件、观察</td>
+    </tr>
+    <tr>
+      <td><strong>样本逻辑</strong></td>
+      <td>随机抽样，追求代表性，样本量大</td>
+      <td>目的性抽样，追求信息丰富性，样本量小</td>
+    </tr>
+    <tr>
+      <td><strong>常用工具</strong></td>
+      <td>回归分析、面板数据、问卷统计、事件研究</td>
+      <td>半结构访谈、焦点小组、案例分析、内容分析</td>
+    </tr>
+    <tr>
+      <td><strong>优势</strong></td>
+      <td>结论可推广，可复制，可量化影响程度</td>
+      <td>深度理解，捕捉复杂性，适合探索性研究</td>
+    </tr>
+    <tr>
+      <td><strong>局限</strong></td>
+      <td>无法解释"为什么"，可能忽视情境</td>
+      <td>结论难以推广，受研究者主观性影响</td>
+    </tr>
+    <tr>
+      <td><strong>硕士可行性</strong></td>
+      <td>高，前提是数据可获取</td>
+      <td>中等，前提是能找到足够访谈对象</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- SECTION 5: COMMON MISTAKES -->
+
+<h2>五、方法选择的四个常见错误</h2>
+
+<div class="mistake-item">
+  <div class="mistake-icon">✗</div>
+  <div class="mistake-text">
+    <h4>用方法来决定研究问题，而不是用研究问题来选方法</h4>
+    <p>"我会用 SPSS，所以我要做定量研究"——这是反向逻辑。正确顺序是：先确定研究问题，再根据问题的性质选方法。方法是工具，研究问题才是出发点。</p>
+  </div>
+</div>
+
+<div class="mistake-item">
+  <div class="mistake-icon">✗</div>
+  <div class="mistake-text">
+    <h4>在 Proposal 里写"将使用定量和定性混合方法"但没有说明为什么</h4>
+    <p>混合方法需要充分的理由——你需要解释为什么单一方法不够，以及两种方法分别负责回答什么子问题。"为了更全面"不是学术论据。</p>
+  </div>
+</div>
+
+<div class="mistake-item">
+  <div class="mistake-icon">✗</div>
+  <div class="mistake-text">
+    <h4>把"方法"和"工具"混为一谈</h4>
+    <p>"我的方法是 SPSS" 或 "我的方法是访谈" 是常见的表述错误。SPSS 是软件工具，访谈是数据收集技术——它们不是研究方法。方法是更高层面的设计选择：定量、定性、案例研究、系统性综述等。</p>
+  </div>
+</div>
+
+<div class="mistake-item">
+  <div class="mistake-icon">✗</div>
+  <div class="mistake-text">
+    <h4>Methodology 只写"我要做什么"，没有写"为什么这样做"</h4>
+    <p>Methodology 章节不是研究计划列表，而是方法论证。每一个方法选择都需要有学术依据——为什么选定量而不是定性？为什么用回归分析而不是描述统计？为什么选这个样本范围？没有论证的方法描述是不完整的。</p>
+  </div>
+</div>
+
+<!-- CTA -->
+
+<div class="cta-box">
+  <h3>研究问题确定了，但不确定用什么方法？</h3>
+  <p>通过中文 AI 对话，根据你的研究问题和实际条件，帮你确定最合适的研究方法，并形成可以提交的 Research Proposal。全程免费开始。</p>
+  <a href="../index.html#chat" class="btn-primary">免费开始对话 →</a>
+</div>
+
+<!-- FAQ -->
+
+<h2>常见问题</h2>
+
+<div class="faq-item">
+  <div class="faq-q">导师让我做定量，但我完全不会统计软件，怎么办？</div>
+  <div class="faq-a">先和导师确认，定量是建议还是要求。如果有一定灵活性，可以提出你的定性方案并说明理由。如果确实必须定量，优先选你学校图书馆有软件授权且有培训支持的工具——很多英国大学提供 SPSS 或 Stata 的使用培训。从最基础的描述统计和回归开始，不要急于使用复杂模型。执行严谨的基础统计，远好过执行混乱的高级统计。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">我想做访谈，但只能找到 5–6 个人，样本太小怎么办？</div>
+  <div class="faq-a">定性研究的样本逻辑和定量不同——它追求的是"信息饱和"而不是"统计代表性"。5–6 个深度访谈，如果每个受访者的背景和经验都足够丰富，完全可以支撑一篇硕士论文。关键是你需要在 Methodology 里解释你的抽样策略（目的性抽样/理论抽样），并说明为什么这些受访者是你研究问题的合适信息来源。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">案例研究（Case Study）算定量还是定性？</div>
+  <div class="faq-a">案例研究是一种研究设计（Research Design），不是研究方法（Research Method）——它可以是定量的、定性的，也可以是混合的，取决于你在案例研究里使用什么数据和分析方式。单案例深度分析通常是定性的；多案例比较如果使用统计分析就是定量的。在 Methodology 里，你需要说明案例研究设计的同时，也说明具体的数据收集和分析方式。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">Secondary Data（二手数据）可以用于定性研究吗？</div>
+  <div class="faq-a">完全可以。二手数据不等于定量数据——政策文件、公司年报、媒体报道、会议记录等文本类二手数据都可以用于定性分析，比如内容分析（Content Analysis）或话语分析（Discourse Analysis）。使用二手数据的优势是不需要自己收集，缺点是你对数据的控制权较低，需要在 Methodology 里承认这一局限。</td>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">Methodology 章节应该写多长？</div>
+  <div class="faq-a">硕士 Dissertation 的 Methodology 章节通常占全文的 15%–20%，约 1500–2500 字（基于 10,000–15,000 字的总字数）。需要覆盖：研究哲学、研究设计、数据来源与收集方式、分析方法、以及研究限制。不需要把每一步操作都写成操作手册，但每个选择都需要有学术依据。</div>
+</div>
+
+<!-- RELATED -->
+
+<h2>相关文章</h2>
+
+<div class="related-links">
+  <a href="research-proposal-guide.html">→ Research Proposal 怎么写？从零到提交的完整指南</a>
+  <a href="research-gap-guide.html">→ Research Gap 怎么找？五种类型详解 + 实操方法</a>
+  <a href="literature-review-guide.html">→ Literature Review 怎么写？结构、步骤与 AI 使用避坑</a>
+  <a href="dissertation-topic-guide.html">→ 英国硕士 Dissertation 选题避坑指南</a>
+  <a href="phd-proposal-guide.html">→ PhD 申请 Research Proposal 写作攻略</a>
+</div>
+
+</article>
+
+<footer>
+  © 2026 论文搭子来了 · AI Research Proposal 生成服务
+</footer>
+
+</body>
+</html>
