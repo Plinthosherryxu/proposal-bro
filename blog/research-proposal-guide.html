@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Proposal 怎么写？从零到提交的完整指南（2026版）| 论文搭子来了</title>
+<meta name="description" content="不知道 Research Proposal 怎么写？本文手把手教你从选题、找 Research Gap、写 Literature Review 到完成 Methodology，适用于英国、澳洲硕士 Dissertation 和博士申请。附模板和常见问题。">
+<meta name="keywords" content="Research Proposal 怎么写, dissertation proposal, 硕士论文选题, research gap 怎么找, 留学论文, 开题报告, PhD申请">
+<link rel="alternate" hreflang="zh-CN" href="https://plinthosherryxu.github.io/proposal-bro/blog/research-proposal-guide.html" />
+<link rel="canonical" href="https://plinthosherryxu.github.io/proposal-bro/blog/research-proposal-guide.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0e1117;
+    --bg2: #151b27;
+    --bg3: #1c2333;
+    --border: rgba(255,255,255,0.08);
+    --border-hover: rgba(255,255,255,0.16);
+    --text: #e2e4e9;
+    --text-muted: #8891a8;
+    --text-dim: #4f5870;
+    --accent: #7eb8f7;
+    --accent-dim: rgba(126,184,247,0.10);
+    --accent-border: rgba(126,184,247,0.25);
+    --gold: #c9a96e;
+    --gold-dim: rgba(201,169,110,0.08);
+    --red: #e85d5d;
+    --green: #5dcc8b;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans SC', 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(14,17,23,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px; color: var(--text);
+    text-decoration: none;
+  }
+
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+
+  .nav-links a {
+    color: var(--text-muted); text-decoration: none;
+    font-size: 13px; font-weight: 400; transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--accent); color: #071224 !important;
+    padding: 6px 16px; border-radius: 6px;
+    font-weight: 500 !important; font-size: 12px !important;
+  }
+
+  /* ARTICLE */
+  article {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .article-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .article-label::before {
+    content: ''; display: inline-block;
+    width: 16px; height: 1px; background: var(--accent);
+  }
+
+  article h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.2; color: var(--text);
+    margin-bottom: 1rem; letter-spacing: -0.01em;
+  }
+
+  .article-meta {
+    font-size: 13px; color: var(--text-dim);
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  article h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem; color: var(--text);
+    margin: 3rem 0 1rem; line-height: 1.3;
+  }
+
+  article h3 {
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--text); margin: 2rem 0 0.75rem;
+  }
+
+  article p {
+    color: var(--text-muted); margin-bottom: 1.25rem;
+    font-size: 15px;
+  }
+
+  article strong { color: var(--text); font-weight: 500; }
+
+  /* CALLOUT BOXES */
+  .callout {
+    background: var(--bg2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-warn {
+    border-left-color: var(--gold);
+  }
+
+  .callout-red {
+    border-left-color: var(--red);
+  }
+
+  /* TERM BOX */
+  .term-box {
+    display: inline-flex; gap: 8px; align-items: baseline;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 13px; font-weight: 400;
+    margin: 0 2px;
+  }
+
+  .term-en { color: var(--accent); font-family: 'DM Sans', sans-serif; }
+  .term-zh { color: var(--text-muted); }
+
+  /* STEP CARDS */
+  .step-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+  }
+
+  .step-card-head {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 0.75rem;
+  }
+
+  .step-badge {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    color: var(--accent);
+    font-size: 12px; font-weight: 500;
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-card-head h3 {
+    margin: 0; font-size: 15px;
+  }
+
+  .step-card p {
+    font-size: 14px; margin-bottom: 0.5rem;
+  }
+
+  /* COMPARE TABLE */
+  .compare {
+    width: 100%; border-collapse: collapse;
+    margin: 1.5rem 0; font-size: 14px;
+  }
+
+  .compare th {
+    text-align: left; font-weight: 500;
+    color: var(--text); padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg2);
+  }
+
+  .compare td {
+    padding: 10px 14px; color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .compare tr:last-child td { border-bottom: none; }
+
+  /* GAP TYPES */
+  .gap-grid {
+    display: flex; flex-direction: column; gap: 8px;
+    margin: 1.25rem 0;
+  }
+
+  .gap-item {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+
+  .gap-item h4 {
+    font-size: 14px; font-weight: 500;
+    color: var(--accent); margin-bottom: 4px;
+  }
+
+  .gap-item p {
+    font-size: 13px; margin-bottom: 0;
+    color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* CTA BOX */
+  .cta-box {
+    background: var(--bg3);
+    border: 1px solid var(--accent-border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  .cta-box h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem; margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .cta-box p {
+    font-size: 14px; color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .btn-primary {
+    background: var(--accent); color: #071224;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 500;
+    padding: 11px 24px; border-radius: 7px;
+    border: none; cursor: pointer;
+    text-decoration: none; display: inline-block;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.88; }
+
+  /* FAQ */
+  .faq-item {
+    border-top: 1px solid var(--border);
+    padding: 1.25rem 0;
+  }
+
+  .faq-item:last-child { border-bottom: 1px solid var(--border); }
+
+  .faq-q {
+    font-size: 15px; font-weight: 500;
+    color: var(--text); margin-bottom: 0.5rem;
+  }
+
+  .faq-a {
+    font-size: 14px; color: var(--text-muted); line-height: 1.7;
+  }
+
+  /* RELATED */
+  .related-links {
+    margin: 2rem 0; display: flex;
+    flex-direction: column; gap: 8px;
+  }
+
+  .related-links a {
+    color: var(--accent); text-decoration: none;
+    font-size: 14px; transition: opacity 0.2s;
+  }
+
+  .related-links a:hover { opacity: 0.75; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem; text-align: center;
+    font-size: 12px; color: var(--text-dim);
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; }
+    article { padding: 3rem 1.25rem 4rem; }
+  }
+</style>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Research Proposal 怎么写？从零到提交的完整指南",
+  "description": "手把手教你写 Research Proposal，从选题到提交，适用于英国、澳洲硕士和博士申请。",
+  "author": { "@type": "Organization", "name": "论文搭子来了" },
+  "datePublished": "2026-06-03",
+  "dateModified": "2026-06-03"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">论文搭子来了</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#how">如何使用</a></li>
+    <li><a href="../index.html#pricing">定价</a></li>
+    <li><a href="../index.html#chat" class="nav-cta">免费试用</a></li>
+  </ul>
+</nav>
+
+<article>
+
+<div class="article-label">完整指南</div>
+
+<h1>Research Proposal 怎么写？<br>从零到提交的完整指南</h1>
+
+<div class="article-meta">2026年6月更新 · 适用于英国、澳洲硕士 Dissertation 及博士申请 · 阅读时间 12 分钟</div>
+
+<!-- HOOK -->
+
+<p>"导师让我写一个 Research Proposal，但我连题目都没想好，更别说 Research Gap 了。"</p>
+
+<p>如果你现在正处于这个状态，别慌。<strong>80% 的留学生在写 Proposal 之前都经历过这个阶段</strong>——不知道从哪里下手，不确定自己的想法够不够"学术"，不清楚导师到底想看到什么。</p>
+
+<p>这篇文章会带你从零开始，一步步走完 Research Proposal 的全部流程。不讲大道理，只讲你现在就能用的方法。</p>
+
+<div class="callout">
+<p><strong>本文适用于：</strong></p>
+<p>英国、澳洲、香港的硕士 Dissertation Proposal 和博士申请 Research Proposal。不同学位的 Proposal 深度不同，文中会标注差异。</p>
+</div>
+
+<!-- SECTION 1: WHAT IS IT -->
+
+<h2>一、Research Proposal 到底是什么？</h2>
+
+<p>Research Proposal 不是论文本身，而是你的<strong>"研究计划书"</strong>。它告诉导师和评审委员会三件事：</p>
+
+<p><strong>你想研究什么</strong>（Research Question），<strong>为什么值得研究</strong>（Research Gap），<strong>你打算怎么研究</strong>（Methodology）。</p>
+
+<p>简单说，Proposal 是你和导师之间的一份"合同"——你用它证明你的研究方向是可行的、有价值的，导师看完之后决定是否批准你的选题。</p>
+
+<table class="compare">
+<tr><th></th><th>硕士 Dissertation Proposal</th><th>博士申请 Proposal</th></tr>
+<tr><td>字数</td><td>1,500–3,000 词</td><td>2,000–5,000 词</td></tr>
+<tr><td>核心目的</td><td>证明选题可行</td><td>证明你有独立研究能力</td></tr>
+<tr><td>理论框架</td><td>不一定需要</td><td>必须有</td></tr>
+<tr><td>评审标准</td><td>导师审批</td><td>委员会评审 + 面试</td></tr>
+<tr><td>提交时间</td><td>开学后 3-6 个月</td><td>申请时提交</td></tr>
+</table>
+
+<!-- SECTION 2: STRUCTURE -->
+
+<h2>二、Research Proposal 包含哪些部分？</h2>
+
+<p>不管你是硕士还是博士，Proposal 的核心结构是一样的，只是深度不同：</p>
+
+<div class="step-card">
+<div class="step-card-head">
+<div class="step-badge">1</div>
+<h3>Research Background & Rationale <span class="term-zh">（研究背景与意义）</span></h3>
+</div>
+<p>你的研究处于什么大背景下？为什么这个问题现在值得研究？这里要建立"这件事很重要，但学术界还没搞清楚"的逻辑。</p>
+</div>
+
+<div class="step-card">
+<div class="step-card-head">
+<div class="step-badge">2</div>
+<h3>Research Question & Objectives <span class="term-zh">（研究问题与目标）</span></h3>
+</div>
+<p>你要回答的核心问题是什么？最好能用一个句子清晰表达。Research Objectives 是把大问题拆分成 2-4 个可操作的子目标。</p>
+</div>
+
+<div class="step-card">
+<div class="step-card-head">
+<div class="step-badge">3</div>
+<h3>Literature Review <span class="term-zh">（文献综述）</span></h3>
+</div>
+<p>不是列一堆论文名字，而是告诉读者"学术界目前做到了哪一步，还有什么没做到"。文献综述的终点就是你的 Research Gap。</p>
+</div>
+
+<div class="step-card">
+<div class="step-card-head">
+<div class="step-badge">4</div>
+<h3>Research Gap <span class="term-zh">（研究空白）</span></h3>
+</div>
+<p>这是 Proposal 最核心的部分——你需要证明你的研究问题还没有被解答过，或者现有的答案不够好。</p>
+</div>
+
+<div class="step-card">
+<div class="step-card-head">
+<div class="step-badge">5</div>
+<h3>Methodology <span class="term-zh">（研究方法）</span></h3>
+</div>
+<p>你打算用什么方法回答你的问题？定量（问卷、回归分析）、定性（访谈、案例研究）、还是混合方法？</p>
+</div>
+
+<div class="step-card">
+<div class="step-card-head">
+<div class="step-badge">6</div>
+<h3>Reference List <span class="term-zh">（参考文献）</span></h3>
+</div>
+<p>Proposal 中引用的所有文献，按学校要求的格式（通常是 Harvard 或 APA）列出。每篇都应该有 DOI。</p>
+</div>
+
+<div class="callout callout-warn">
+<p><strong>博士申请还需要额外包含：</strong></p>
+<p><span class="term-box"><span class="term-en">Theoretical Framework</span><span class="term-zh">理论框架</span></span> — 你的研究建立在哪个理论基础上？</p>
+<p><span class="term-box"><span class="term-en">Expected Contribution</span><span class="term-zh">预期学术贡献</span></span> — 你的研究对学术界的独特价值是什么？</p>
+<p><span class="term-box"><span class="term-en">Timeline</span><span class="term-zh">研究时间线</span></span> — 3-4年的研究计划如何分阶段完成？</p>
+</div>
+
+<!-- SECTION 3: HOW TO START -->
+
+<h2>三、从零开始的第一步：怎么找到你的研究方向？</h2>
+
+<p>大多数人卡在 Proposal 上，不是因为不会写，而是因为<strong>不知道自己到底要研究什么</strong>。</p>
+
+<p>这里有一个简单但有效的方法：<strong>不要问自己"我对什么感兴趣"，而是问自己"什么让我觉得奇怪"。</strong></p>
+
+<p>"我对可持续发展感兴趣"太宽泛了，无法直接变成选题。但"为什么 ESG 评分高的公司融资成本反而更高"——这是一个具体的观察，可以直接变成 Research Question。</p>
+
+<p>具体来说，试着回答以下问题：</p>
+
+<p><strong>上课或读文献时，有没有什么让你觉得"这和我想的不一样"？</strong><br>
+<strong>实习或工作中，有没有遇到过"教科书说的和现实不一致"的情况？</strong><br>
+<strong>最近有没有什么新闻/政策/事件，让你觉得"这可能改变了原来的规律"？</strong></p>
+
+<p>如果你能回答其中任何一个，你就已经有了一个选题的种子。</p>
+
+<!-- SECTION 4: RESEARCH GAP -->
+
+<h2>四、Research Gap 怎么找？五种类型详解</h2>
+
+<p>Research Gap 是 Proposal 成败的关键。导师看到你的 Gap 论证不够，第一反应就是"这个选题不成立"。</p>
+
+<p>Gap 不是你自己凭空想出来的，而是通过阅读文献发现的。以下是五种最常见的 Research Gap 类型：</p>
+
+<div class="gap-grid">
+<div class="gap-item">
+<h4>1. 文献空白 Literature Gap</h4>
+<p>某个话题、群体或地区被学术界忽视了。例如："大量研究关注美国市场的 ESG 效果，但英国 REIT 市场几乎没有实证研究。"</p>
+</div>
+<div class="gap-item">
+<h4>2. 方法空白 Methodological Gap</h4>
+<p>现有研究都用了同一种方法，换一种方法可能得到不同结论。例如："现有研究都用横截面数据，但面板数据可以控制个体差异。"</p>
+</div>
+<div class="gap-item">
+<h4>3. 应用空白 Application Gap</h4>
+<p>理论已经有了，但还没有在某个具体情境下被验证。例如："利益相关者理论已被广泛研究，但在发展中国家房地产行业中的适用性未被检验。"</p>
+</div>
+<div class="gap-item">
+<h4>4. 跨学科空白 Interdisciplinary Gap</h4>
+<p>两个领域各有研究，但还没有人把它们结合起来。例如："行为经济学和房地产定价都有丰富文献，但两者的交叉应用很少。"</p>
+</div>
+<div class="gap-item">
+<h4>5. 时间空白 Temporal Gap</h4>
+<p>某个重大事件改变了原有规律，但学术界还没跟上。例如："COVID-19 之后的远程办公趋势如何影响了商业地产估值？"</p>
+</div>
+</div>
+
+<div class="callout callout-red">
+<p><strong>常见错误：</strong>"No one has studied X" 不等于 Research Gap。你还需要解释<strong>为什么研究 X 是重要的</strong>——否则没人研究可能只是因为这个问题不值得研究。</p>
+</div>
+
+<!-- SECTION 5: RQ -->
+
+<h2>五、怎么把模糊的想法变成 Research Question？</h2>
+
+<p>一个好的 Research Question 需要满足以下条件：</p>
+
+<p><strong>具体</strong>：不是"ESG 对房地产有什么影响"，而是"ESG 披露质量如何影响英国上市房地产公司的融资成本"。</p>
+
+<p><strong>可回答</strong>：在你的时间和资源范围内能完成。硕士论文通常 3-6 个月，博士论文 3-4 年。</p>
+
+<p><strong>有意义</strong>：你的答案对学术界或实践界有价值，不只是填充一个空白。</p>
+
+<p>一个实用的公式：</p>
+
+<div class="callout">
+<p><strong>Research Question = 研究对象 + 研究问题 + 限定条件</strong></p>
+<p>例如："How does [ESG disclosure quality] affect [the cost of capital] for [UK listed real estate companies in the post-2020 regulatory environment]?"</p>
+</div>
+
+<p>如果你的题目太大（"ESG 对房地产的影响"），试着用三个限制条件来缩小：<strong>一个国家、一个行业、一个时间段</strong>。</p>
+
+<!-- SECTION 6: METHODOLOGY -->
+
+<h2>六、Methodology 怎么选？</h2>
+
+<p>方法论不是越复杂越好，而是<strong>最适合你的问题的方法就是最好的方法</strong>。</p>
+
+<table class="compare">
+<tr><th>你想回答的问题</th><th>推荐方法</th><th>示例</th></tr>
+<tr><td>X 对 Y 有没有影响？（因果关系）</td><td>定量：回归分析、面板数据</td><td>ESG 评分对股价的影响</td></tr>
+<tr><td>人们怎么看待 X？（态度/看法）</td><td>定性：半结构化访谈</td><td>投资者如何评估 ESG 信息</td></tr>
+<tr><td>X 在不同情境下有什么不同？</td><td>比较案例研究</td><td>英国 vs 中国 ESG 监管效果</td></tr>
+<tr><td>既想测量又想解释</td><td>混合方法：问卷 + 访谈</td><td>ESG 影响的量化 + 机制探索</td></tr>
+</table>
+
+<div class="callout callout-warn">
+<p><strong>硕士 vs 博士的方法论深度差异：</strong></p>
+<p>硕士 Proposal 只需要说明你用什么方法、为什么选这个方法。博士 Proposal 还需要讨论研究哲学（positivism / interpretivism）、详细的研究设计、以及你如何处理 validity 和 reliability 问题。</p>
+</div>
+
+<!-- SECTION 7: COMMON MISTAKES -->
+
+<h2>七、Proposal 被拒的三个最常见原因</h2>
+
+<p><strong>1. 题目太大。</strong>"研究 ESG 对全球房地产的影响"——这不是一篇论文能完成的。导师看到这种题目的第一反应是"这个学生还没想清楚"。解决方法：缩小到一个国家、一个行业、一个时间段。</p>
+
+<p><strong>2. Research Gap 论证不足。</strong>只说"没人研究过"不够，你需要解释为什么这个 Gap 值得填补。一个好的 Gap 论证需要3-5篇文献来支撑。</p>
+
+<p><strong>3. Research Question 和 Methodology 不匹配。</strong>你的问题是"人们怎么看待 X"，但你选了定量方法——这不合逻辑。问题决定方法，不是反过来。</p>
+
+<!-- CTA -->
+
+<div class="cta-box">
+<h3>还是不确定方向？试试 AI 选题工具</h3>
+<p>通过 20-30 分钟的中文对话，帮你从模糊的兴趣出发，找到 Research Gap，确认 Research Question。对话完全免费。</p>
+<a href="../index.html#chat" class="btn-primary">免费开始对话 →</a>
+</div>
+
+<!-- FAQ -->
+
+<h2>八、常见问题</h2>
+
+<div class="faq-item">
+<div class="faq-q">Research Proposal 和 Dissertation 的 Introduction 是一回事吗？</div>
+<div class="faq-a">不完全是。Proposal 是"计划书"，写在研究开始之前；Introduction 是论文的第一章，写在研究完成之后。两者内容有重叠（背景、RQ、Gap），但 Introduction 还需要包含研究结果的概述。实际操作中，很多人会把 Proposal 改编成 Introduction。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Proposal 需要写多少参考文献？</div>
+<div class="faq-a">硕士 Proposal 通常引用 15-25 篇，博士 Proposal 通常 30-50 篇。质量比数量重要——导师更看重你是否引用了领域内的关键文献，而不是数量多少。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">导师说"题目太大"，怎么办？</div>
+<div class="faq-a">这是最常见的反馈。解决方法：给你的题目加三个限定条件——一个具体的研究对象（哪类公司/哪个群体）、一个地理范围（哪个国家/城市）、一个时间范围（哪几年的数据）。加完之后题目通常就合适了。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Proposal 被拒了可以重新提交吗？</div>
+<div class="faq-a">大多数学校允许修改后重新提交。关键是理解导师拒绝的原因——是方向有问题，还是写法有问题？如果是方向问题，可能需要重新做 Gap 分析；如果是写法问题，结构调整就能解决。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">PhD 申请的 Proposal 需要和导师事先沟通吗？</div>
+<div class="faq-a">强烈建议。大多数英国博士项目鼓励（甚至要求）申请者在提交前联系目标导师。导师可以告诉你他/她目前的兴趣方向、是否有名额、以及你的研究方向是否合适。一封简洁的套磁邮件能大大提高成功率。</div>
+</div>
+
+<!-- RELATED -->
+
+<h2>相关文章</h2>
+
+<div class="related-links">
+<a href="research-gap-guide.html">→ Research Gap 怎么找？五种类型详解 + 实操方法</a>
+<a href="dissertation-topic-guide.html">→ 英国硕士 Dissertation 选题避坑指南：6个最常见错误</a>
+<a href="phd-proposal-guide.html">→ PhD 申请 Research Proposal 写作攻略</a>
+<a href="literature-review-guide.html">→ Literature Review 怎么写？结构、步骤与 AI 使用避坑</a>
+<a href="methodology-guide.html">→ Methodology 怎么选？定量、定性、混合方法完整对比</a>
+</div>
+
+</article>
+
+<footer>
+  © 2026 论文搭子来了 · AI Research Proposal 生成服务
+</footer>
+
+</body>
+</html>
