@@ -3,365 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research Gap 怎么找？五种类型详解 + 实操方法（2026版）| 论文搭子来了</title>
-<meta name="description" content="Research Gap 找不到？本文详解五种 Research Gap 类型（文献空白、方法空白、应用空白、跨学科空白、时间空白），提供逐步找 Gap 的实操方法，适用于英国、澳洲硕士 Dissertation 和博士申请。">
-<meta name="keywords" content="Research Gap 怎么找, research gap 是什么, 文献综述 gap, dissertation 选题, 硕士论文 研究空白, literature review gap, 留学论文选题">
-<link rel="alternate" hreflang="zh-CN" href="https://plinthosherryxu.github.io/proposal-bro/blog/research-gap-guide.html" />
+<title>Research Gap 怎么找？五种类型详解与实战方法（2026版）| 论文搭子来了</title>
+<meta name="description" content="不知道 Research Gap 怎么找？本文详解五种 Research Gap 类型（文献空白、方法空白、应用空白、跨学科空白、时间空白），附实战案例和自查清单。适用于英国、澳洲硕士 Dissertation 和博士申请。">
+<meta name="keywords" content="research gap 怎么找, research gap 类型, 研究空白, 论文选题, literature gap, methodological gap, 硕士论文, dissertation topic, PhD proposal">
 <link rel="canonical" href="https://plinthosherryxu.github.io/proposal-bro/blog/research-gap-guide.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #0e1117;
-    --bg2: #151b27;
-    --bg3: #1c2333;
-    --border: rgba(255,255,255,0.08);
-    --border-hover: rgba(255,255,255,0.16);
-    --text: #e2e4e9;
-    --text-muted: #8891a8;
-    --text-dim: #4f5870;
-    --accent: #7eb8f7;
-    --accent-dim: rgba(126,184,247,0.10);
-    --accent-border: rgba(126,184,247,0.25);
-    --gold: #c9a96e;
-    --gold-dim: rgba(201,169,110,0.08);
-    --red: #e85d5d;
-    --green: #5dcc8b;
-  }
-
+  :root { --bg: #0e1117; --bg2: #151b27; --bg3: #1c2333; --border: rgba(255,255,255,0.08); --border-hover: rgba(255,255,255,0.16); --text: #e2e4e9; --text-muted: #8891a8; --text-dim: #4f5870; --accent: #7eb8f7; --accent-dim: rgba(126,184,247,0.10); --accent-border: rgba(126,184,247,0.25); --gold: #c9a96e; --gold-dim: rgba(201,169,110,0.08); --red: #e85d5d; --green: #5dcc8b; }
   html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Noto Sans SC', 'DM Sans', sans-serif;
-    font-weight: 300;
-    line-height: 1.85;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(14,17,23,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 2rem;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 56px;
-  }
-
-  .nav-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 16px; color: var(--text);
-    text-decoration: none;
-  }
-
+  body { background: var(--bg); color: var(--text); font-family: 'Noto Sans SC', 'DM Sans', sans-serif; font-weight: 300; line-height: 1.85; -webkit-font-smoothing: antialiased; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(14,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--text); text-decoration: none; }
   .nav-links { display: flex; gap: 1.5rem; list-style: none; }
-
-  .nav-links a {
-    color: var(--text-muted); text-decoration: none;
-    font-size: 13px; font-weight: 400; transition: color 0.2s;
-  }
-
+  .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 400; transition: color 0.2s; }
   .nav-links a:hover { color: var(--text); }
-
-  .nav-cta {
-    background: var(--accent); color: #071224 !important;
-    padding: 6px 16px; border-radius: 6px;
-    font-weight: 500 !important; font-size: 12px !important;
-  }
-
-  article {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem 5rem;
-  }
-
-  .article-label {
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 1.25rem;
-    display: flex; align-items: center; gap: 8px;
-  }
-
-  .article-label::before {
-    content: ''; display: inline-block;
-    width: 16px; height: 1px; background: var(--accent);
-  }
-
-  article h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    line-height: 1.2; color: var(--text);
-    margin-bottom: 1rem; letter-spacing: -0.01em;
-  }
-
-  .article-meta {
-    font-size: 13px; color: var(--text-dim);
-    margin-bottom: 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  article h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.4rem; color: var(--text);
-    margin: 3rem 0 1rem; line-height: 1.3;
-  }
-
-  article h3 {
-    font-size: 1.05rem; font-weight: 500;
-    color: var(--text); margin: 2rem 0 0.75rem;
-  }
-
-  article p {
-    color: var(--text-muted); margin-bottom: 1.25rem;
-    font-size: 15px;
-  }
-
+  .nav-cta { background: var(--accent); color: #071224 !important; padding: 6px 16px; border-radius: 6px; font-weight: 500 !important; font-size: 12px !important; }
+  article { max-width: 680px; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+  .article-label { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px; }
+  .article-label::before { content: ''; display: inline-block; width: 16px; height: 1px; background: var(--accent); }
+  article h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.2; color: var(--text); margin-bottom: 1rem; letter-spacing: -0.01em; }
+  .article-meta { font-size: 13px; color: var(--text-dim); margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+  article h2 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--text); margin: 3rem 0 1rem; line-height: 1.3; }
+  article h3 { font-size: 1.05rem; font-weight: 500; color: var(--text); margin: 2rem 0 0.75rem; }
+  article p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 15px; }
   article strong { color: var(--text); font-weight: 500; }
-
-  .callout {
-    background: var(--bg2);
-    border-left: 3px solid var(--accent);
-    border-radius: 0 8px 8px 0;
-    padding: 1.25rem 1.5rem;
-    margin: 1.5rem 0;
-  }
-
-  .callout p { margin-bottom: 0.5rem; }
-  .callout p:last-child { margin-bottom: 0; }
-
+  .callout { background: var(--bg2); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .callout p { margin-bottom: 0.5rem; } .callout p:last-child { margin-bottom: 0; }
   .callout-warn { border-left-color: var(--gold); }
   .callout-red { border-left-color: var(--red); }
-  .callout-green { border-left-color: var(--green); }
-
-  .term-zh { color: var(--text-dim); font-size: 0.9em; }
-
-  /* GAP TYPE CARDS — more detailed than article 1 */
-  .gap-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.75rem;
-    margin: 1.5rem 0;
-    position: relative;
-  }
-
-  .gap-card-header {
-    display: flex; align-items: flex-start; gap: 14px;
-    margin-bottom: 1rem;
-  }
-
-  .gap-badge {
-    background: var(--accent-dim);
-    border: 1px solid var(--accent-border);
-    color: var(--accent);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px; font-weight: 500;
-    padding: 3px 10px; border-radius: 20px;
-    white-space: nowrap; flex-shrink: 0;
-    margin-top: 3px;
-  }
-
-  .gap-card h3 {
-    margin: 0; font-size: 16px;
-    color: var(--text);
-  }
-
-  .gap-card .gap-definition {
-    font-size: 14px; color: var(--text-muted);
-    margin-bottom: 1rem; line-height: 1.7;
-  }
-
-  .gap-example {
-    background: var(--bg3);
-    border-radius: 8px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 1rem;
-  }
-
-  .gap-example-label {
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--text-dim); margin-bottom: 6px;
-  }
-
-  .gap-example p {
-    font-size: 13px; margin-bottom: 0;
-    color: var(--text-muted); line-height: 1.65;
-  }
-
-  .gap-signal {
-    font-size: 13px; color: var(--text-muted);
-  }
-
-  .gap-signal strong { color: var(--gold); }
-
-  /* STEP CARDS */
-  .step-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin: 1.25rem 0;
-  }
-
-  .step-card-head {
-    display: flex; align-items: center; gap: 12px;
-    margin-bottom: 0.75rem;
-  }
-
-  .step-badge {
-    background: var(--accent-dim);
-    border: 1px solid var(--accent-border);
-    color: var(--accent);
-    font-size: 12px; font-weight: 500;
-    width: 28px; height: 28px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-
+  .compare { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+  .compare th { text-align: left; font-weight: 500; color: var(--text); padding: 10px 14px; border-bottom: 1px solid var(--border); background: var(--bg2); }
+  .compare td { padding: 10px 14px; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+  .compare tr:last-child td { border-bottom: none; }
+  .gap-grid { display: flex; flex-direction: column; gap: 12px; margin: 1.5rem 0; }
+  .gap-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; }
+  .gap-item h4 { font-size: 15px; font-weight: 500; color: var(--accent); margin-bottom: 8px; }
+  .gap-item p { font-size: 14px; margin-bottom: 0.5rem; color: var(--text-muted); line-height: 1.7; }
+  .gap-item p:last-child { margin-bottom: 0; }
+  .gap-example { background: var(--bg3); border-radius: 6px; padding: 0.75rem 1rem; margin-top: 0.75rem; font-size: 13px; color: var(--text-muted); border-left: 2px solid var(--gold); }
+  .step-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; margin: 1.25rem 0; }
+  .step-card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 0.75rem; }
+  .step-badge { background: var(--accent-dim); border: 1px solid var(--accent-border); color: var(--accent); font-size: 12px; font-weight: 500; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .step-card-head h3 { margin: 0; font-size: 15px; }
   .step-card p { font-size: 14px; margin-bottom: 0.5rem; }
-  .step-card p:last-child { margin-bottom: 0; }
-
-  /* SENTENCE TEMPLATES */
-  .template-box {
-    background: var(--bg3);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.25rem 1.5rem;
-    margin: 1.25rem 0;
-    font-family: 'DM Sans', sans-serif;
-  }
-
-  .template-label {
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 10px;
-  }
-
-  .template-text {
-    font-size: 13px; color: var(--text-muted);
-    line-height: 1.8;
-  }
-
-  .template-text em {
-    color: var(--gold); font-style: normal;
-    background: var(--gold-dim);
-    padding: 1px 5px; border-radius: 3px;
-  }
-
-  /* COMPARE TABLE */
-  .compare {
-    width: 100%; border-collapse: collapse;
-    margin: 1.5rem 0; font-size: 14px;
-  }
-
-  .compare th {
-    text-align: left; font-weight: 500;
-    color: var(--text); padding: 10px 14px;
-    border-bottom: 1px solid var(--border);
-    background: var(--bg2);
-  }
-
-  .compare td {
-    padding: 10px 14px; color: var(--text-muted);
-    border-bottom: 1px solid var(--border);
-    vertical-align: top;
-  }
-
-  .compare tr:last-child td { border-bottom: none; }
-
-  /* CTA BOX */
-  .cta-box {
-    background: var(--bg3);
-    border: 1px solid var(--accent-border);
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    margin: 3rem 0;
-  }
-
-  .cta-box h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.3rem; margin-bottom: 0.5rem;
-    color: var(--text);
-  }
-
-  .cta-box p {
-    font-size: 14px; color: var(--text-muted);
-    margin-bottom: 1.25rem;
-  }
-
-  .btn-primary {
-    background: var(--accent); color: #071224;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px; font-weight: 500;
-    padding: 11px 24px; border-radius: 7px;
-    border: none; cursor: pointer;
-    text-decoration: none; display: inline-block;
-    transition: opacity 0.2s;
-  }
-
+  .do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1.25rem 0; }
+  .do-box, .dont-box { border-radius: 8px; padding: 1rem 1.25rem; font-size: 13px; line-height: 1.7; }
+  .do-box { background: rgba(93,204,139,0.06); border: 1px solid rgba(93,204,139,0.2); }
+  .dont-box { background: rgba(232,93,93,0.06); border: 1px solid rgba(232,93,93,0.2); }
+  .do-box h4 { color: var(--green); font-size: 13px; margin-bottom: 6px; }
+  .dont-box h4 { color: var(--red); font-size: 13px; margin-bottom: 6px; }
+  .do-box p, .dont-box p { color: var(--text-muted); margin-bottom: 4px; font-size: 13px; }
+  .cta-box { background: var(--bg3); border: 1px solid var(--accent-border); border-radius: 12px; padding: 2rem; text-align: center; margin: 3rem 0; }
+  .cta-box h3 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--text); }
+  .cta-box p { font-size: 14px; color: var(--text-muted); margin-bottom: 1.25rem; }
+  .btn-primary { background: var(--accent); color: #071224; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 11px 24px; border-radius: 7px; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
   .btn-primary:hover { opacity: 0.88; }
-
-  /* FAQ */
-  .faq-item {
-    border-top: 1px solid var(--border);
-    padding: 1.25rem 0;
-  }
-
+  .faq-item { border-top: 1px solid var(--border); padding: 1.25rem 0; }
   .faq-item:last-child { border-bottom: 1px solid var(--border); }
-
-  .faq-q {
-    font-size: 15px; font-weight: 500;
-    color: var(--text); margin-bottom: 0.5rem;
-  }
-
-  .faq-a {
-    font-size: 14px; color: var(--text-muted); line-height: 1.7;
-  }
-
-  /* RELATED */
-  .related-links {
-    margin: 2rem 0; display: flex;
-    flex-direction: column; gap: 8px;
-  }
-
-  .related-links a {
-    color: var(--accent); text-decoration: none;
-    font-size: 14px; transition: opacity 0.2s;
-  }
-
+  .faq-q { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 0.5rem; }
+  .faq-a { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  .related-links { margin: 2rem 0; display: flex; flex-direction: column; gap: 8px; }
+  .related-links a { color: var(--accent); text-decoration: none; font-size: 14px; transition: opacity 0.2s; }
   .related-links a:hover { opacity: 0.75; }
-
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 2rem; text-align: center;
-    font-size: 12px; color: var(--text-dim);
-  }
-
-  @media (max-width: 600px) {
-    nav { padding: 0 1rem; }
-    .nav-links { display: none; }
-    article { padding: 3rem 1.25rem 4rem; }
-  }
+  footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-size: 12px; color: var(--text-dim); }
+  @media (max-width: 600px) { nav { padding: 0 1rem; } .nav-links { display: none; } article { padding: 3rem 1.25rem 4rem; } .do-dont { grid-template-columns: 1fr; } }
 </style>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Research Gap 怎么找？五种类型详解 + 实操方法",
-  "description": "详解五种 Research Gap 类型，提供逐步找 Gap 的实操方法，适用于英国、澳洲硕士 Dissertation 和博士申请。",
+  "headline": "Research Gap 怎么找？五种类型详解与实战方法",
+  "description": "详解五种 Research Gap 类型，附实战案例和自查清单，适用于英国、澳洲硕士 Dissertation 和博士申请。",
   "author": { "@type": "Organization", "name": "论文搭子来了" },
-  "datePublished": "2026-06-03",
-  "dateModified": "2026-06-03"
+  "datePublished": "2026-07-04",
+  "dateModified": "2026-07-04"
 }
 </script>
 </head>
@@ -378,276 +97,248 @@
 
 <article>
 
-<div class="article-label">深度指南</div>
+<div class="article-label">深度解析</div>
 
-<h1>Research Gap 怎么找？<br>五种类型详解 + 实操方法</h1>
+<h1>Research Gap 怎么找？<br>五种类型详解与实战方法</h1>
 
-<div class="article-meta">2026年6月更新 · 适用于英国、澳洲硕士 Dissertation 及博士申请 · 阅读时间 14 分钟</div>
+<div class="article-meta">2026年7月更新 · 适用于英国、澳洲硕士 Dissertation 及博士申请 · 阅读时间 12 分钟</div>
 
 <!-- HOOK -->
 
-<p>"我读了很多文献，但还是找不到 Research Gap。"</p>
+<p>"导师让我找 Research Gap，但我读了一堆文献之后，感觉什么都已经被研究过了。"</p>
 
-<p>这是留学生写 Dissertation 或申请 PhD 时最常见的卡点。不少人花了两三周泡在 Google Scholar 里，读了几十篇论文，仍然无法回答导师最基本的问题：<strong>"你的研究填补了什么空白？"</strong></p>
+<p>这是几乎所有刚开始做研究的同学都会经历的感受。问题不是没有 Gap，而是你还不知道<strong>Gap 长什么样</strong>。</p>
 
-<p>问题通常不是读得不够多，而是<strong>不知道在读文献时该找什么</strong>。Research Gap 不会自动跳出来告诉你它在哪里——你需要带着一套框架去主动识别它。</p>
-
-<p>本文将给你这套框架：五种 Research Gap 类型、每种类型的识别方法、以及写进 Proposal 的句式模板。</p>
+<p>Research Gap 不是「一个没人研究过的话题」——它是一个<strong>可以被论证的、值得被填补的、你有能力填补的学术空白</strong>。这篇文章会教你识别五种不同类型的 Gap，并告诉你怎么用文献来论证它们。</p>
 
 <div class="callout">
-<p><strong>本文适用于：</strong>英国、澳洲、香港的硕士 Dissertation Proposal 和博士申请 Research Proposal。如果你还不清楚 Research Proposal 的整体结构，可以先读：<a href="research-proposal-guide.html" style="color: var(--accent);">→ Research Proposal 怎么写？从零到提交的完整指南</a></p>
+<p><strong>核心原则：</strong>"No one has studied X" 从来都不够。你还必须解释<strong>为什么不研究 X 是一个问题</strong>——否则，没人研究可能仅仅是因为它不值得研究。一个好的 Gap 论证需要 3–5 篇文献来支撑。</p>
 </div>
 
-<!-- SECTION 1: WHAT IS A GAP -->
+<!-- SECTION 1 -->
 
-<h2>一、Research Gap 到底是什么？</h2>
+<h2>一、什么是 Research Gap？</h2>
 
-<p>Research Gap 是<strong>现有学术文献还没有充分回答的问题</strong>。它不是你不知道的知识，而是学术界集体还不清楚的问题。</p>
+<p>Research Gap 是现有学术文献中的一个空白——某个问题、某个群体、某种方法、某个情境还没有被充分研究。</p>
 
-<p>一个有效的 Research Gap 需要满足两个条件：</p>
+<p>但「空白」只是起点。Gap 的论证逻辑有三层：</p>
 
-<p><strong>条件一：它确实存在。</strong>你能指出"现有研究在X方面存在不足"，并且能引用文献来证明这一点——不是你自己说不足，而是通过文献梳理归纳出来的。</p>
-
-<p><strong>条件二：它值得填补。</strong>只有"没人研究过"不够。你还需要解释为什么填补这个 Gap 对学术界或实践界有意义。如果没人研究某个问题，可能只是因为这个问题不重要。</p>
-
-<div class="callout callout-warn">
-<p><strong>最常见的误解：</strong>"这个话题没什么人研究，所以这就是我的 Research Gap。"</p>
-<p>这是错的。Research Gap 需要建立在你已经读过相关文献的基础上——你需要先展示"这个领域有什么研究"，然后才能指出"但这些研究忽视了什么"。</p>
+<div class="step-card">
+<div class="step-card-head">
+<div class="step-badge">1</div>
+<h3>什么已经被研究（Literature Review 展示）</h3>
+</div>
+<p>你需要先清楚地展示学术界目前的研究格局：谁做了什么、用了什么方法、得出了什么结论。</p>
 </div>
 
-<!-- SECTION 2: FIVE TYPES -->
+<div class="step-card">
+<div class="step-card-head">
+<div class="step-badge">2</div>
+<h3>什么还没有被研究（Gap Identification）</h3>
+</div>
+<p>在上述格局中，哪里有空白？是某个群体被忽略了？还是某种方法从未被使用？还是某个重大事件改变了原有规律但学术界还没跟上？</p>
+</div>
+
+<div class="step-card">
+<div class="step-card-head">
+<div class="step-badge">3</div>
+<h3>为什么值得研究（Gap Justification）</h3>
+</div>
+<p>这是最关键的一步。你需要论证：填补这个空白能带来什么——新的理论理解、更好的政策依据、更精确的实践指导？</p>
+</div>
+
+<!-- SECTION 2 -->
 
 <h2>二、五种 Research Gap 类型</h2>
 
-<p>理解 Gap 的类型，是找 Gap 的第一步。不同类型的 Gap 对应不同的文献阅读策略，也对应不同的 Proposal 写法。</p>
+<p>Research Gap 不只有一种。理解不同类型可以帮助你更有方向地去阅读文献、更有针对性地构建论证。</p>
 
-<!-- TYPE 1 -->
-<div class="gap-card">
-  <div class="gap-card-header">
-    <div class="gap-badge">类型 1</div>
-    <h3>文献空白 Literature Gap</h3>
-  </div>
-  <p class="gap-definition">某个话题、群体、地区或角度被学术界系统性地忽视了。文献整体存在，但某个重要维度几乎没有研究。</p>
-  <div class="gap-example">
-    <div class="gap-example-label">典型句式</div>
-    <p>"大量研究关注 [X]，但 [特定群体/地区/角度] 的视角在文献中几乎缺失。"</p>
-  </div>
-  <div class="gap-example">
-    <div class="gap-example-label">示例</div>
-    <p>"ESG 对房地产价值的影响已有大量研究，但现有文献几乎全部聚焦于美国和欧盟大型市场，英国中小型 REIT 在新监管框架下的实证证据极为有限。"</p>
-  </div>
-  <p class="gap-signal"><strong>识别信号：</strong>读文献时发现，几乎所有研究都在研究同一类对象（同一个国家、同一个行业、同一个人群），而你感兴趣的那个角度没人碰过。</p>
+<div class="gap-grid">
+
+<div class="gap-item">
+<h4>1. 文献空白 Literature Gap</h4>
+<p>某个话题、某个群体或某个地区被学术界忽视了。这是最常见的 Gap 类型——也是最容易沦为「没人研究过所以我来研究」的陷阱。</p>
+<p><strong>关键论证：</strong>你需要说明这个群体/地区/话题为什么与已有研究中的情境不同，以至于不能简单套用已有结论。</p>
+<div class="gap-example">
+<strong>案例：</strong>"大量研究关注了伦敦商业地产的绿色溢价效应（Fuerst & McAllister, 2011; Chegut et al., 2014），但英国二线城市（曼彻斯特、伯明翰、利兹）的商业地产市场特征——更薄的交易量、更短的租约、更低的机构持有比例——使得一线城市的结论不一定适用。"
+</div>
 </div>
 
-<!-- TYPE 2 -->
-<div class="gap-card">
-  <div class="gap-card-header">
-    <div class="gap-badge">类型 2</div>
-    <h3>方法空白 Methodological Gap</h3>
-  </div>
-  <p class="gap-definition">现有研究在方法上存在局限，换一种方法可能得到不同甚至相反的结论。</p>
-  <div class="gap-example">
-    <div class="gap-example-label">典型句式</div>
-    <p>"现有研究主要依赖 [某种方法]，但这种方法无法捕捉 [某个维度]，因此结论存在局限性。"</p>
-  </div>
-  <div class="gap-example">
-    <div class="gap-example-label">示例</div>
-    <p>"现有关于租户满意度的研究主要使用问卷调查，但问卷无法捕捉租户在租赁全周期中的动态体验变化。采用纵向访谈方法可以填补这一方法空白。"</p>
-  </div>
-  <p class="gap-signal"><strong>识别信号：</strong>你读到某篇论文的 Limitations 部分，作者自己写道"本研究仅使用了横截面数据"或"样本局限于大型企业"——这就是他们留给你的方法空白。</p>
+<div class="gap-item">
+<h4>2. 方法空白 Methodological Gap</h4>
+<p>现有研究都用了同一种方法，换一种方法可能得到不同结论。或者，现有方法存在已知的局限性（如样本偏差、遗漏变量），使用更合适的方法可以提供更可靠的证据。</p>
+<p><strong>关键论证：</strong>你需要说明新方法能解决旧方法的什么具体问题，而不只是「方法不同所以我来试试」。</p>
+<div class="gap-example">
+<strong>案例：</strong>"现有关于 ESG 与企业价值关系的研究主要采用横截面回归（Smith, 2020; Lee, 2021），无法控制个体效应。采用面板数据模型可以消除时不变的个体异质性，提供更稳健的因果推断。"
+</div>
 </div>
 
-<!-- TYPE 3 -->
-<div class="gap-card">
-  <div class="gap-card-header">
-    <div class="gap-badge">类型 3</div>
-    <h3>应用空白 Application Gap</h3>
-  </div>
-  <p class="gap-definition">某个理论或框架已经在一个领域被充分验证，但还没有被应用到你感兴趣的特定情境中。</p>
-  <div class="gap-example">
-    <div class="gap-example-label">典型句式</div>
-    <p>"[理论/框架] 已被广泛用于 [领域A]，但其在 [领域B/特定情境] 中的适用性尚未被系统检验。"</p>
-  </div>
-  <div class="gap-example">
-    <div class="gap-example-label">示例</div>
-    <p>"信号理论（Signalling Theory）已被广泛用于解释上市公司的信息披露行为，但其在非上市中小型开发商的ESG披露决策中的适用性几乎没有实证研究。"</p>
-  </div>
-  <p class="gap-signal"><strong>识别信号：</strong>你在读理论文献时发现，这个理论在你的细分领域里完全没有人用过——但逻辑上它应该适用。</p>
+<div class="gap-item">
+<h4>3. 应用空白 Application Gap</h4>
+<p>理论已经成熟，但还没有在某个具体情境下被验证。与文献空白不同的是，这里的重点是把已有的理论框架「搬到」一个新环境中检验其适用性。</p>
+<p><strong>关键论证：</strong>你需要说明新情境的哪些独特特征可能导致理论预测失效或需要修正。</p>
+<div class="gap-example">
+<strong>案例：</strong>"利益相关者理论（Freeman, 1984）已在跨国企业 ESG 研究中被广泛验证，但在发展中国家的房地产企业中，产权结构和政府关系的特殊性可能使利益相关者的权力动态与西方研究中的假设不同。"
+</div>
 </div>
 
-<!-- TYPE 4 -->
-<div class="gap-card">
-  <div class="gap-card-header">
-    <div class="gap-badge">类型 4</div>
-    <h3>跨学科空白 Interdisciplinary Gap</h3>
-  </div>
-  <p class="gap-definition">两个不同领域的研究各自丰富，但学者们还没有把它们系统地结合起来研究。</p>
-  <div class="gap-example">
-    <div class="gap-example-label">典型句式</div>
-    <p>"[领域A] 和 [领域B] 的研究都相当成熟，但两者的交叉应用几乎没有文献覆盖。"</p>
-  </div>
-  <div class="gap-example">
-    <div class="gap-example-label">示例</div>
-    <p>"行为经济学领域关于锚定效应的研究已相当成熟，房地产定价领域也有大量实证文献，但两者的结合——即锚定效应如何系统性影响商业地产估值决策——尚未受到充分关注。"</p>
-  </div>
-  <p class="gap-signal"><strong>识别信号：</strong>你在读文献时发现，自己需要同时查两个领域的文献库，但这两个领域的学者几乎互不引用对方的研究。</p>
+<div class="gap-item">
+<h4>4. 跨学科空白 Interdisciplinary Gap</h4>
+<p>两个学科各自有丰富的文献，但它们的交叉领域几乎没有被研究。这种 Gap 通常能产生最有创新性的研究，但也需要你具备两个领域的基本知识。</p>
+<p><strong>关键论证：</strong>你需要说明两个领域的交叉为什么能产生新的学术见解——不是简单的「A+B」，而是交叉产生了单独研究 A 或 B 无法回答的问题。</p>
+<div class="gap-example">
+<strong>案例：</strong>"行为经济学中的禀赋效应（Kahneman et al., 1991）和房地产定价各自有丰富文献，但两者的交叉应用——业主对 ESG 改造投资的心理锚定如何影响定价决策——目前几乎没有实证研究。"
+</div>
 </div>
 
-<!-- TYPE 5 -->
-<div class="gap-card">
-  <div class="gap-card-header">
-    <div class="gap-badge">类型 5</div>
-    <h3>时间空白 Temporal Gap</h3>
-  </div>
-  <p class="gap-definition">某个重大外部变化（政策、危机、技术、市场结构变化）打破了原有规律，但学术界尚未跟上更新研究结论。</p>
-  <div class="gap-example">
-    <div class="gap-example-label">典型句式</div>
-    <p>"现有文献的结论建立在 [事件/政策] 之前，[事件/政策] 的发生从根本上改变了这一领域的运作逻辑，更新的实证研究是必要的。"</p>
-  </div>
-  <div class="gap-example">
-    <div class="gap-example-label">示例</div>
-    <p>"2020年之前关于商业地产估值的文献均未考虑远程办公的结构性影响。COVID-19之后办公需求的根本性转变使原有的估值模型适用性存疑，针对后疫情时代的新实证研究存在明显空白。"</p>
-  </div>
-  <p class="gap-signal"><strong>识别信号：</strong>你发现某个领域的核心文献都发表于某个重大事件之前，而这个事件明显改变了这个领域的基本逻辑。</p>
+<div class="gap-item">
+<h4>5. 时间空白 Temporal Gap</h4>
+<p>某个重大事件（政策变化、技术革命、危机事件）改变了原有规律，但学术界的实证研究还没有跟上。这种 Gap 通常时效性很强，也最容易让导师觉得「有意义」。</p>
+<p><strong>关键论证：</strong>你需要说明这个事件从根本上改变了什么——如果只是量的变化而非质的变化，可能不足以构成一个独立的 Gap。</p>
+<div class="gap-example">
+<strong>案例：</strong>"COVID-19 之后，远程办公的常态化从根本上改变了商业地产的需求结构（CBRE, 2023），但现有的 hedonic pricing 模型尚未将弹性办公比例纳入控制变量——这可能导致 2020 年后的绿色溢价估计存在偏差。"
+</div>
 </div>
 
-<!-- SECTION 3: HOW TO FIND -->
+</div>
 
-<h2>三、实操：怎么一步步找到你的 Research Gap</h2>
+<!-- SECTION 3 -->
 
-<p>下面是一个可以直接使用的四步流程。</p>
+<h2>三、怎么在文献中发现 Gap？</h2>
+
+<p>Gap 不会自动跳出来。你需要带着特定的问题去阅读文献。</p>
+
+<h3>阅读时问自己的五个问题</h3>
+
+<table class="compare">
+<tr><th>问题</th><th>对应的 Gap 类型</th></tr>
+<tr><td>这个研究的样本是谁？我的目标群体被包含了吗？</td><td>文献空白 / 应用空白</td></tr>
+<tr><td>这个研究用了什么方法？有没有已知的局限？</td><td>方法空白</td></tr>
+<tr><td>这个研究什么时候做的？此后有重大事件发生吗？</td><td>时间空白</td></tr>
+<tr><td>这个研究的理论来自哪个学科？另一个学科怎么看这个问题？</td><td>跨学科空白</td></tr>
+<tr><td>这篇论文的 Limitations 和 Future Research 部分写了什么？</td><td>所有类型</td></tr>
+</table>
+
+<div class="callout-warn callout">
+<p><strong>最有效的捷径：</strong>直接阅读近 3 年综述论文（Review / Survey）的最后一节。综述作者通常会在「Future Directions」或「Limitations」部分明确指出领域中尚未解决的问题——这些就是现成的 Gap 线索。</p>
+</div>
+
+<h3>构建对比矩阵</h3>
+
+<p>读完核心文献后，建一个简单的表格：</p>
+
+<table class="compare">
+<tr><th>论文</th><th>研究对象</th><th>地域</th><th>方法</th><th>核心发现</th><th>局限性</th></tr>
+<tr><td>Fuerst (2011)</td><td>BREEAM 溢价</td><td>伦敦</td><td>Hedonic</td><td>19.7% 租金溢价</td><td>区域样本太小</td></tr>
+<tr><td>Chegut (2014)</td><td>认证等级效应</td><td>欧洲首都</td><td>Hedonic + PSM</td><td>非线性溢价</td><td>仅限首都城市</td></tr>
+<tr><td>Zhang (2022)</td><td>选择偏差</td><td>中国</td><td>IV 回归</td><td>溢价被高估</td><td>未测试英国</td></tr>
+<tr><td><strong>你的研究</strong></td><td><strong>?</strong></td><td><strong>?</strong></td><td><strong>?</strong></td><td><strong>?</strong></td><td><strong>→ Gap 在这里</strong></td></tr>
+</table>
+
+<p>表格中空白的那个格子，就是你的 Research Gap。</p>
+
+<!-- SECTION 4 -->
+
+<h2>四、怎么论证 Gap 的价值？</h2>
+
+<p>找到 Gap 只完成了一半工作。你还需要让导师相信这个 Gap <strong>值得填补</strong>。论证 Gap 价值有三个常用角度：</p>
 
 <div class="step-card">
-  <div class="step-card-head">
-    <div class="step-badge">1</div>
-    <h3>先确定你的大方向，不要一开始就想 Gap</h3>
-  </div>
-  <p>在找 Gap 之前，你需要先有一个大致的研究方向——哪个领域、哪类问题、你对什么感兴趣。这不需要很精确，但要足够具体才能开始搜文献。</p>
-  <p>例如："我对 ESG 和房地产的关系感兴趣" 就足够开始了。"我想研究商业" 就太宽泛了。</p>
+<div class="step-card-head">
+<div class="step-badge">A</div>
+<h3>学术价值</h3>
+</div>
+<p>填补这个 Gap 能推进理论发展吗？能修正或扩展现有模型吗？能为后续研究提供基础吗？</p>
+<p style="font-size:13px; color: var(--text-dim);">例如："测试绿色溢价在二线城市的适用性，可以检验 hedonic pricing 框架在不同市场条件下的稳健性。"</p>
 </div>
 
 <div class="step-card">
-  <div class="step-card-head">
-    <div class="step-badge">2</div>
-    <h3>搜文献时重点读这两个部分</h3>
-  </div>
-  <p>很多人读文献从头到尾通读，效率极低。找 Gap 时，优先读两个部分：</p>
-  <p><strong>每篇论文的 Introduction 最后几段</strong>——作者通常会在这里明确说"现有文献的不足是……本研究的贡献是……"。这就是他们承认的 Gap，也可能是他们没有完全解决的 Gap。</p>
-  <p><strong>每篇论文的 Limitations 和 Future Research 部分</strong>——作者会直接列出他们自己研究的局限，以及他们建议未来研究去填补的方向。这是最直接的 Gap 信号。</p>
+<div class="step-card-head">
+<div class="step-badge">B</div>
+<h3>政策价值</h3>
+</div>
+<p>你的研究结果能为政策制定者提供依据吗？特别是当政策正在变化或面临争议的时候。</p>
+<p style="font-size:13px; color: var(--text-dim);">例如："在 MEES 法规即将收紧的背景下，了解二线城市的绿色溢价可以帮助政策制定者评估是否需要区域差异化的合规支持。"</p>
 </div>
 
 <div class="step-card">
-  <div class="step-card-head">
-    <div class="step-badge">3</div>
-    <h3>用"矛盾文献"定位 Gap</h3>
-  </div>
-  <p>如果你在读文献时发现，两篇研究同一个问题的论文得出了<strong>相反的结论</strong>——这本身就是一个 Research Gap。</p>
-  <p>为什么结论相反？是因为研究的市场不同？时间段不同？用的方法不同？还是因为理论假设不同？找到原因，你就找到了一个可以研究的 Gap。</p>
-  <p>典型句式："关于 [X] 的研究结论存在明显分歧。[作者A] 发现……而 [作者B] 的研究却表明……这种矛盾可能源于……本研究试图通过……来调和这一分歧。"</p>
+<div class="step-card-head">
+<div class="step-badge">C</div>
+<h3>实践价值</h3>
+</div>
+<p>你的研究能帮助从业者做出更好的决策吗？能回答行业中实际存在的问题吗？</p>
+<p style="font-size:13px; color: var(--text-dim);">例如："二线城市的开发商和投资者需要知道绿色认证的投资回报率——目前他们只能参考伦敦数据做决策。"</p>
 </div>
 
-<div class="step-card">
-  <div class="step-card-head">
-    <div class="step-badge">4</div>
-    <h3>对照五种类型，给你的 Gap 归类</h3>
-  </div>
-  <p>当你觉得自己找到了一个方向，把它对照上面五种类型，问自己：这是哪种 Gap？</p>
-  <p>这个问题有两个作用：一是帮你验证这个 Gap 是否真实存在，二是帮你决定怎么在 Proposal 里论证它——不同类型的 Gap 需要不同类型的文献支撑。</p>
+<div class="callout-red callout">
+<p><strong>常见陷阱：</strong>不要同时承诺学术、政策和实践三方面的贡献——除非你确实能做到。硕士 Proposal 通常聚焦一到两个层面就够了。过度承诺反而会让导师质疑可行性。</p>
 </div>
 
-<!-- SECTION 4: HOW TO WRITE -->
+<!-- SECTION 5 -->
 
-<h2>四、找到 Gap 之后，怎么写进 Proposal？</h2>
+<h2>五、Gap 论证的 Do 和 Don't</h2>
 
-<p>找到 Gap 只完成了一半，另一半是把它清楚地写进你的 Proposal。一个写得好的 Gap 论证，通常遵循以下三步逻辑：</p>
-
-<div class="callout callout-green">
-<p><strong>Gap 论证的三段式结构：</strong></p>
-<p><strong>第一步：肯定现有研究。</strong>先承认这个领域有哪些重要研究，展示你读过文献。不要一上来就说"没人研究过X"。</p>
-<p><strong>第二步：指出不足。</strong>清楚说明现有研究在哪里存在局限，并引用文献支撑这个判断。</p>
-<p><strong>第三步：说明意义。</strong>解释为什么填补这个 Gap 是有价值的——对学术界的理论贡献，或对实践界的政策/管理启示。</p>
+<div class="do-dont">
+<div class="do-box">
+<h4>✓ Do</h4>
+<p>用 3–5 篇文献支撑每个 Gap 声明</p>
+<p>指出「哪些研究做了什么」后再说「什么没做」</p>
+<p>解释为什么这个 Gap 对学术或实践有影响</p>
+<p>承认已有研究的贡献，然后指出它们的共同局限</p>
+</div>
+<div class="dont-box">
+<h4>✗ Don't</h4>
+<p>"No one has studied X" 后直接跳到 Research Question</p>
+<p>把 Gap 写成「我感兴趣但没人做过」</p>
+<p>批评别人的研究「不好」来制造 Gap</p>
+<p>声称一个全新领域（如果真的全新，你没有文献可引用）</p>
+</div>
 </div>
 
-<h3>五种类型对应的写法模板</h3>
+<!-- SECTION 6 -->
 
-<div class="template-box">
-  <div class="template-label">文献空白型</div>
-  <p class="template-text">
-    "While [领域] has received considerable scholarly attention (引文), existing studies have predominantly focused on [已有研究的对象/地区]. The [你的目标对象/地区] remains significantly underexplored, representing a notable gap in the literature. This study addresses this gap by..."
-  </p>
-</div>
+<h2>六、Research Gap 自查清单</h2>
 
-<div class="template-box">
-  <div class="template-label">方法空白型</div>
-  <p class="template-text">
-    "Previous research on [话题] has relied heavily on [方法] (引文). While valuable, this approach is limited in its ability to capture [某个维度]. This study addresses this methodological limitation by employing [你的方法], which allows for a more nuanced examination of..."
-  </p>
-</div>
-
-<div class="template-box">
-  <div class="template-label">应用空白型</div>
-  <p class="template-text">
-    "[理论] has been extensively applied in [领域A] (引文), yet its applicability to [你的情境] has not been systematically examined. Given [你的情境的特殊性], there are theoretical reasons to expect [预期发现]. This study therefore extends [理论] to..."
-  </p>
-</div>
-
-<div class="template-box">
-  <div class="template-label">矛盾结论型（跨学科或时间空白均可用）</div>
-  <p class="template-text">
-    "Findings on [话题] remain inconclusive. While [作者A] (年份) found that [结论A], [作者B] (年份) reported contradictory evidence suggesting [结论B]. This inconsistency may be attributable to [可能原因]. The present study seeks to reconcile these conflicting findings by..."
-  </p>
-</div>
-
-<div class="callout callout-warn">
-<p><strong>硕士 vs 博士的 Gap 深度要求：</strong></p>
-<p>硕士 Proposal 指出一个清晰的 Gap 并说明其意义即可，通常需要3-5篇文献支撑。博士 Proposal 需要更系统的文献综述，Gap 的论证通常需要10篇以上文献，并且要区分不同 Gap 类型，说明你的研究对理论的贡献而不只是实证的贡献。</p>
-</div>
-
-<!-- SECTION 5: COMMON MISTAKES -->
-
-<h2>五、三个最常见的 Gap 论证错误</h2>
-
-<p><strong>错误一："这个话题没人研究过。"</strong>这几乎永远是错的。几乎所有话题都有人研究过。你真正要说的是"这个话题的某个具体角度/群体/方法被忽视了"。</p>
-
-<p><strong>错误二：Gap 论证没有文献支撑。</strong>你说某个角度"研究不足"，但没有引用文献来证明——这让读者无法验证你的判断。Gap 论证必须是文献驱动的，不是你的个人感觉。</p>
-
-<p><strong>错误三：找到 Gap 之后没有说明意义。</strong>学术写作里，"No one has done X" 是不够的，你还需要说 "That matters because..."。如果你的 Gap 填补后对任何人都没有价值，这个 Gap 就不值得研究。</p>
+<table class="compare">
+<tr><th>检查项</th><th>通过标准</th></tr>
+<tr><td>Gap 类型清晰</td><td>能说出你的 Gap 属于五种类型中的哪一种（或哪两种的组合）</td></tr>
+<tr><td>文献支撑</td><td>至少 3 篇文献支撑你的 Gap 声明（不是自己的推测）</td></tr>
+<tr><td>正向 + 负向</td><td>既展示了「已有研究做了什么」，也展示了「什么没做」</td></tr>
+<tr><td>价值论证</td><td>解释了填补这个 Gap 的学术、政策或实践意义</td></tr>
+<tr><td>可操作性</td><td>Gap 足够具体，可以转化为一个可回答的 Research Question</td></tr>
+<tr><td>不过度承诺</td><td>没有声称一个硕士论文无法完成的贡献规模</td></tr>
+</table>
 
 <!-- CTA -->
 
 <div class="cta-box">
-  <h3>知道方法，但还是找不到自己的 Gap？</h3>
-  <p>很多时候，Gap 找不到是因为研究方向还不够清晰。通过 20-30 分钟的中文 AI 对话，我们帮你从兴趣出发，一步步锁定可行的 Research Gap 和 Research Question。对话完全免费。</p>
-  <a href="../index.html#chat" class="btn-primary">免费开始对话 →</a>
+<h3>不确定自己的 Gap 是否站得住？</h3>
+<p>通过 20–30 分钟的中文对话，我们帮你从模糊兴趣出发，用文献定位可行的 Research Gap，并确认它可以转化为 Research Question。对话完全免费。</p>
+<a href="../index.html#chat" class="btn-primary">免费开始对话 →</a>
 </div>
 
 <!-- FAQ -->
 
-<h2>六、常见问题</h2>
+<h2>七、常见问题</h2>
 
 <div class="faq-item">
-  <div class="faq-q">一篇 Proposal 需要有几个 Research Gap？</div>
-  <div class="faq-a">通常一个核心 Gap 就够了，但你可以从多个角度（比如同时是文献空白 + 方法空白）来强化对同一个 Gap 的论证。不要刻意凑多个不相关的 Gap——这会让读者觉得你的研究方向不聚焦。</div>
+<div class="faq-q">我可以组合两种 Gap 类型吗？</div>
+<div class="faq-a">可以，而且这样做通常更有说服力。例如，文献空白 + 时间空白（「英国二线城市的绿色溢价在 MEES 收紧后从未被研究」）比单独的文献空白更能论证研究的必要性。大多数高质量论文的 Gap 都是两种类型的组合。</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">导师说"你的 Gap 太小了"，怎么办？</div>
-  <div class="faq-a">这说明你的 Gap 论证缺乏充分的意义说明。技巧是把你的小 Gap 连接到更大的学术争论或现实问题——你的研究虽然聚焦，但它回答的问题对某个更大的讨论有直接贡献。找到这条线，重新写你的 Rationale 部分。</div>
+<div class="faq-q">导师说我的 Gap 太小了 / 太大了，怎么调整？</div>
+<div class="faq-a"><strong>太大：</strong>加限定条件——一个国家、一个行业、一个时间段。例如，从「ESG 与房地产价值」缩小到「BREEAM 认证对曼彻斯特商业办公楼交易价格的影响（2018–2024）」。<strong>太小：</strong>扩大研究对象或加入比较维度。例如，从「一个城市」扩展到「四个二线城市的比较研究」。</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">怎么证明一个 Gap 真的存在，而不只是我没搜到相关文献？</div>
-  <div class="faq-a">两步验证：第一，换几个不同的关键词搜索，确认不是关键词问题；第二，找到这个领域最重要的综述文章（Review Article），看看综述作者自己认为哪些方向是未来的研究空白。如果综述作者也提到了这个方向，你的 Gap 就有了权威背书。</div>
+<div class="faq-q">我找到了 Gap，但数据拿不到怎么办？</div>
+<div class="faq-a">数据可得性是选题的硬约束。在确定 Gap 之前，先确认你能获取什么数据。一个可操作的 Gap 优于一个完美但无法执行的 Gap。在 Proposal 的 Data Sources & Feasibility 部分，明确列出数据来源、获取方式和你已确认的可用性。</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">Research Gap 和 Research Question 有什么关系？</div>
-  <div class="faq-a">Gap 是"问题是什么"，Research Question 是"我的研究要具体怎么回答这个问题"。Gap 论证完成后，你的 Research Question 应该能直接从 Gap 推导出来——读者看完你的 Gap 分析，应该自然地期待你接下来提出一个特定的研究问题。</div>
-</div>
-
-<div class="faq-item">
-  <div class="faq-q">我在两个方向上都找到了 Gap，怎么选？</div>
-  <div class="faq-a">考虑三个维度：可行性（数据是否可获得？方法你是否掌握？）、兴趣（你愿意在这个方向上花3-6个月吗？）、以及导师匹配（你的导师对哪个方向更熟悉、更感兴趣？）。三个条件都符合的方向是最优选择；如果三选一，优先选可行性最高的。</div>
+<div class="faq-q">Gap 和 Research Question 是什么关系？</div>
+<div class="faq-a">Gap 是「学术界目前不知道什么」，Research Question 是「你打算通过什么具体问题来填补这个空白」。Gap 是动机，RQ 是行动。一个好的 RQ 应该能直接回应你识别的 Gap——如果你的 RQ 和 Gap 之间有逻辑断层，说明其中一个需要调整。</div>
 </div>
 
 <!-- RELATED -->
@@ -655,11 +346,8 @@
 <h2>相关文章</h2>
 
 <div class="related-links">
-  <a href="research-proposal-guide.html">→ Research Proposal 怎么写？从零到提交的完整指南</a>
-<a href="dissertation-topic-guide.html">→ 英国硕士 Dissertation 选题避坑指南：6个最常见错误</a>
-<a href="phd-proposal-guide.html">→ PhD 申请 Research Proposal 写作攻略</a>
-<a href="literature-review-guide.html">→ Literature Review 怎么写？结构、步骤与 AI 使用避坑</a>
-<a href="methodology-guide.html">→ Methodology 怎么选？定量、定性、混合方法完整对比</a>
+<a href="research-proposal-guide.html">→ Research Proposal 怎么写？从零到提交的完整指南</a>
+<a href="literature-review-guide.html">→ Literature Review 怎么写？主题式组织与批判性分析完整教程</a>
 </div>
 
 </article>
