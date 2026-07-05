@@ -850,73 +850,6 @@
   </div>
 </section>
 <!--
-  ============================================================
-  论文搭子来了 · HOMEPAGE UPDATE PACKAGE
-  ============================================================
-  
-  This file contains THREE things to add to your site:
-  
-  1. GA4 TRACKING CODE  →  paste into <head> of EVERY page
-  2. TEAM SECTION       →  paste into index.html body
-  3. SAMPLE OUTPUT      →  paste into index.html body
-  
-  DEPLOYMENT STEPS (do them in order):
-  
-  Step 1: Create GA4 property
-    - Go to analytics.google.com → Admin → Create → Property
-    - Name: "Proposal Bro" / Timezone: UK / Currency: GBP
-    - Choose Web → enter: plinthosherryxu.github.io/proposal-bro
-    - Copy the Measurement ID (looks like G-XXXXXXXXXX)
-  
-  Step 2: Add GA4 code to EVERY HTML page
-    - Open each file: index.html, and each blog/*.html
-    - Paste the GA4 SNIPPET (Section 1 below) just before </head>
-    - Replace G-XXXXXXXXXX with your actual Measurement ID
-  
-  Step 3: Add the sample PDF to your repo
-    - Put "Sample_Proposal_ProposalBro.pdf" into /assets/ folder
-      (create the folder if it doesn't exist)
-  
-  Step 4: Add team + sample sections to index.html
-    - Find a good insertion point in your index.html
-      (after the "how it works" section and before the chatflow/CTA)
-    - Paste Section 2 (TEAM) first, then Section 3 (SAMPLE OUTPUT)
-  
-  Step 5: Push to GitHub
-    - git add .
-    - git commit -m "Add GA4 tracking, team section, sample output"
-    - git push
-  
-  Step 6: Verify
-    - Open your site → go to GA4 → Reports → Realtime
-    - You should see yourself as an active user
-    - Link GA4 to Search Console: Admin → Product links → Search Console
-  
-  ============================================================
--->
-
-
-<!-- ========================================================
-     SECTION 1: GA4 TRACKING CODE
-     Paste this into the <head> of EVERY HTML page.
-     Replace G-XXXXXXXXXX with your actual Measurement ID.
-     ======================================================== -->
-
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-
-
-<!-- ========================================================
-     SECTION 2: TEAM / ABOUT SECTION
-     Paste this into index.html where you want the team info.
-     Uses the same CSS variables as your existing design.
-     ======================================================== -->
 
 <!-- TEAM SECTION -->
 <section id="team" style="padding: 5rem 1.5rem; max-width: 680px; margin: 0 auto;">
@@ -972,13 +905,6 @@
   </div>
 
 </section>
-
-
-<!-- ========================================================
-     SECTION 3: SAMPLE OUTPUT SECTION
-     Paste this AFTER the team section.
-     Make sure Sample_Proposal_ProposalBro.pdf is in /assets/
-     ======================================================== -->
 
 <!-- SAMPLE OUTPUT SECTION -->
 <section id="sample" style="padding: 3rem 1.5rem 5rem; max-width: 680px; margin: 0 auto;">
