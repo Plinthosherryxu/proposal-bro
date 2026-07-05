@@ -849,7 +849,227 @@
     </iframe>
   </div>
 </section>
+<!--
+  ============================================================
+  论文搭子来了 · HOMEPAGE UPDATE PACKAGE
+  ============================================================
+  
+  This file contains THREE things to add to your site:
+  
+  1. GA4 TRACKING CODE  →  paste into <head> of EVERY page
+  2. TEAM SECTION       →  paste into index.html body
+  3. SAMPLE OUTPUT      →  paste into index.html body
+  
+  DEPLOYMENT STEPS (do them in order):
+  
+  Step 1: Create GA4 property
+    - Go to analytics.google.com → Admin → Create → Property
+    - Name: "Proposal Bro" / Timezone: UK / Currency: GBP
+    - Choose Web → enter: plinthosherryxu.github.io/proposal-bro
+    - Copy the Measurement ID (looks like G-XXXXXXXXXX)
+  
+  Step 2: Add GA4 code to EVERY HTML page
+    - Open each file: index.html, and each blog/*.html
+    - Paste the GA4 SNIPPET (Section 1 below) just before </head>
+    - Replace G-XXXXXXXXXX with your actual Measurement ID
+  
+  Step 3: Add the sample PDF to your repo
+    - Put "Sample_Proposal_ProposalBro.pdf" into /assets/ folder
+      (create the folder if it doesn't exist)
+  
+  Step 4: Add team + sample sections to index.html
+    - Find a good insertion point in your index.html
+      (after the "how it works" section and before the chatflow/CTA)
+    - Paste Section 2 (TEAM) first, then Section 3 (SAMPLE OUTPUT)
+  
+  Step 5: Push to GitHub
+    - git add .
+    - git commit -m "Add GA4 tracking, team section, sample output"
+    - git push
+  
+  Step 6: Verify
+    - Open your site → go to GA4 → Reports → Realtime
+    - You should see yourself as an active user
+    - Link GA4 to Search Console: Admin → Product links → Search Console
+  
+  ============================================================
+-->
 
+
+<!-- ========================================================
+     SECTION 1: GA4 TRACKING CODE
+     Paste this into the <head> of EVERY HTML page.
+     Replace G-XXXXXXXXXX with your actual Measurement ID.
+     ======================================================== -->
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+
+<!-- ========================================================
+     SECTION 2: TEAM / ABOUT SECTION
+     Paste this into index.html where you want the team info.
+     Uses the same CSS variables as your existing design.
+     ======================================================== -->
+
+<!-- TEAM SECTION -->
+<section id="team" style="padding: 5rem 1.5rem; max-width: 680px; margin: 0 auto;">
+
+  <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent, #7eb8f7); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">
+    <span style="display: inline-block; width: 16px; height: 1px; background: var(--accent, #7eb8f7);"></span>
+    关于我们
+  </div>
+
+  <h2 style="font-family: 'DM Serif Display', serif; font-size: clamp(1.5rem, 3.5vw, 2rem); line-height: 1.3; color: var(--text, #e2e4e9); margin-bottom: 1.5rem;">
+    我们是谁
+  </h2>
+
+  <p style="color: var(--text-muted, #8891a8); font-size: 15px; line-height: 1.85; margin-bottom: 1.25rem;">
+    论文搭子来了 由一支深耕学术研究的团队打造。我们的核心成员拥有英国高校的教学与科研背景，专注于社会科学研究方法、学术写作指导和 AI 辅助研究工具开发。
+  </p>
+
+  <p style="color: var(--text-muted, #8891a8); font-size: 15px; line-height: 1.85; margin-bottom: 2rem;">
+    我们不是代写。我们做的事情，是把资深研究者在选题、文献分析、Gap 定位方面的经验，转化为一套可复用的 AI 流程——让每个留学生都能获得「被认真带过」的选题体验。
+  </p>
+
+  <!-- Trust signals grid -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1rem;">
+
+    <div style="background: var(--bg2, #151b27); border: 1px solid var(--border, rgba(255,255,255,0.08)); border-radius: 10px; padding: 1.25rem;">
+      <div style="font-size: 13px; font-weight: 500; color: var(--accent, #7eb8f7); margin-bottom: 6px;">🎓 学术背景</div>
+      <p style="font-size: 13px; color: var(--text-muted, #8891a8); line-height: 1.6; margin: 0;">
+        团队成员长期从事学术研究与教学，熟悉英国、澳洲高校的 Proposal 评审标准
+      </p>
+    </div>
+
+    <div style="background: var(--bg2, #151b27); border: 1px solid var(--border, rgba(255,255,255,0.08)); border-radius: 10px; padding: 1.25rem;">
+      <div style="font-size: 13px; font-weight: 500; color: var(--accent, #7eb8f7); margin-bottom: 6px;">🔍 DOI 验证</div>
+      <p style="font-size: 13px; color: var(--text-muted, #8891a8); line-height: 1.6; margin: 0;">
+        每份 Proposal 中引用的文献均来自 OpenAlex 学术数据库，DOI 逐条自动验证
+      </p>
+    </div>
+
+    <div style="background: var(--bg2, #151b27); border: 1px solid var(--border, rgba(255,255,255,0.08)); border-radius: 10px; padding: 1.25rem;">
+      <div style="font-size: 13px; font-weight: 500; color: var(--accent, #7eb8f7); margin-bottom: 6px;">📋 起点，不是终稿</div>
+      <p style="font-size: 13px; color: var(--text-muted, #8891a8); line-height: 1.6; margin: 0;">
+        产品定位为「研究起点」——我们鼓励你拿着 Proposal 去和导师深入讨论
+      </p>
+    </div>
+
+    <div style="background: var(--bg2, #151b27); border: 1px solid var(--border, rgba(255,255,255,0.08)); border-radius: 10px; padding: 1.25rem;">
+      <div style="font-size: 13px; font-weight: 500; color: var(--accent, #7eb8f7); margin-bottom: 6px;">🔒 数据隐私</div>
+      <p style="font-size: 13px; color: var(--text-muted, #8891a8); line-height: 1.6; margin: 0;">
+        所有对话数据仅用于生成你的 Proposal，不会用于其他用途或分享给第三方
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     SECTION 3: SAMPLE OUTPUT SECTION
+     Paste this AFTER the team section.
+     Make sure Sample_Proposal_ProposalBro.pdf is in /assets/
+     ======================================================== -->
+
+<!-- SAMPLE OUTPUT SECTION -->
+<section id="sample" style="padding: 3rem 1.5rem 5rem; max-width: 680px; margin: 0 auto;">
+
+  <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent, #7eb8f7); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">
+    <span style="display: inline-block; width: 16px; height: 1px; background: var(--accent, #7eb8f7);"></span>
+    交付样例
+  </div>
+
+  <h2 style="font-family: 'DM Serif Display', serif; font-size: clamp(1.5rem, 3.5vw, 2rem); line-height: 1.3; color: var(--text, #e2e4e9); margin-bottom: 0.75rem;">
+    你会收到什么？
+  </h2>
+
+  <p style="color: var(--text-muted, #8891a8); font-size: 15px; line-height: 1.85; margin-bottom: 2rem;">
+    一份完整的英文 Research Proposal（PDF），包含以下七个章节。所有引用文献均来自学术数据库，DOI 逐条验证。以下是一个真实样例：
+  </p>
+
+  <!-- Document preview card -->
+  <div style="background: var(--bg2, #151b27); border: 1px solid var(--border, rgba(255,255,255,0.08)); border-radius: 12px; overflow: hidden; margin-bottom: 2rem;">
+
+    <!-- Preview header -->
+    <div style="padding: 1rem 1.25rem; border-bottom: 1px solid var(--border, rgba(255,255,255,0.08)); display: flex; align-items: center; gap: 10px;">
+      <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--red, #e85d5d);"></div>
+      <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--gold, #c9a96e);"></div>
+      <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--green, #5dcc8b);"></div>
+      <span style="font-size: 12px; color: var(--text-dim, #4f5870); margin-left: 8px;">Sample_Research_Proposal.pdf</span>
+    </div>
+
+    <!-- Document content preview -->
+    <div style="padding: 2rem; background: #fafbfc; color: #2d3748;">
+
+      <!-- Blue sample banner -->
+      <div style="background: #7eb8f7; color: white; text-align: center; padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 1.5rem;">
+        📋 SAMPLE PROPOSAL — FOR DEMONSTRATION PURPOSES
+      </div>
+
+      <h3 style="font-family: 'DM Sans', sans-serif; text-align: center; font-size: 18px; font-weight: 600; color: #1a202c; margin-bottom: 4px;">
+        Research Proposal
+      </h3>
+      <p style="text-align: center; font-style: italic; font-size: 13px; color: #4a5568; margin-bottom: 1.5rem; line-height: 1.5;">
+        The Impact of Green Building Certifications on Commercial Property Values in UK Secondary Cities: A Hedonic Pricing Approach
+      </p>
+
+      <!-- Section list -->
+      <div style="font-size: 13px; color: #4a5568; line-height: 2.2; border-top: 1px solid #e2e8f0; padding-top: 1rem;">
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #edf2f7; padding: 4px 0;">
+          <span style="font-weight: 500; color: #2d3748;">1. Research Background & Rationale</span>
+          <span style="color: #a0aec0; font-size: 12px;">~300 words</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #edf2f7; padding: 4px 0;">
+          <span style="font-weight: 500; color: #2d3748;">2. Research Question & Objectives</span>
+          <span style="color: #a0aec0; font-size: 12px;">3 objectives</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #edf2f7; padding: 4px 0;">
+          <span style="font-weight: 500; color: #2d3748;">3. Literature Review Framework</span>
+          <span style="color: #a0aec0; font-size: 12px;">~500 words</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #edf2f7; padding: 4px 0;">
+          <span style="font-weight: 500; color: #2d3748;">4. Research Gap & Contribution</span>
+          <span style="color: #a0aec0; font-size: 12px; font-weight: 500; color: #7eb8f7;">★ 核心章节</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #edf2f7; padding: 4px 0;">
+          <span style="font-weight: 500; color: #2d3748;">5. Methodology</span>
+          <span style="color: #a0aec0; font-size: 12px;">含文献先例</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #edf2f7; padding: 4px 0;">
+          <span style="font-weight: 500; color: #2d3748;">6. Data Sources & Feasibility</span>
+          <span style="color: #a0aec0; font-size: 12px;">具体数据库</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 4px 0;">
+          <span style="font-weight: 500; color: #2d3748;">7. Reference List</span>
+          <span style="color: #a0aec0; font-size: 12px;">APA 7th + DOI ✓</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Download bar -->
+    <div style="padding: 1rem 1.25rem; border-top: 1px solid var(--border, rgba(255,255,255,0.08)); display: flex; align-items: center; justify-content: space-between;">
+      <span style="font-size: 13px; color: var(--text-muted, #8891a8);">6 页 · 约 2,600 词 · 9 篇参考文献（全部 DOI 验证）</span>
+      <a href="assets/Sample_Proposal_ProposalBro.pdf" 
+         download
+         style="background: var(--accent, #7eb8f7); color: #071224; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 7px 16px; border-radius: 6px; text-decoration: none; display: inline-block; transition: opacity 0.2s;"
+         onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+        📄 下载样例 PDF
+      </a>
+    </div>
+
+  </div>
+
+</section>
 <script>
 function switchChat(type, btn) {
   var frame = document.getElementById('chat-frame');
