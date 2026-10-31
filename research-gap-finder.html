@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8ND1FQ87FB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8ND1FQ87FB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Gap Finder | 免费 AI 研究空白分析工具 | 论文搭子来了</title>
+<meta name="description" content="用中文输入你的研究领域，AI 基于真实学术文献帮你找到 Research Gap。免费使用，文献 DOI 可查。留学生选题必备工具。">
+<meta name="keywords" content="research gap finder, research gap tool, 找research gap, 研究空白, 论文选题工具, dissertation topic, literature gap analysis, AI选题">
+<link rel="canonical" href="https://plinthosherryxu.github.io/proposal-bro/research-gap-finder.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0e1117;
+    --bg2: #151b27;
+    --bg3: #1c2333;
+    --border: rgba(255,255,255,0.08);
+    --border-hover: rgba(255,255,255,0.16);
+    --text: #e8eaf0;
+    --text-muted: #8891a8;
+    --text-dim: #4f5870;
+    --accent: #7eb8f7;
+    --accent-dim: rgba(126,184,247,0.12);
+    --accent-border: rgba(126,184,247,0.3);
+    --gold: #c9a96e;
+    --gold-dim: rgba(201,169,110,0.1);
+    --green: #5dcc8b;
+    --green-dim: rgba(93,204,139,0.1);
+    --green-border: rgba(93,204,139,0.3);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(14,17,23,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    color: var(--text);
+    letter-spacing: 0.01em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--accent);
+    color: #071224 !important;
+    padding: 7px 18px;
+    border-radius: 6px;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    transition: opacity 0.2s !important;
+  }
+
+  .nav-cta:hover { opacity: 0.88; color: #071224 !important; }
+
+  section { padding: 5rem 2rem; max-width: 900px; margin: 0 auto; }
+
+  /* HERO */
+  .hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--green-dim);
+    border: 1px solid var(--green-border);
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    line-height: 1.18;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin-bottom: 2.5rem;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #071224;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 13px 28px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+  .hero-note {
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* SECTION HEADERS */
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
+  }
+
+  .section-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 540px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+
+  /* HOW IT WORKS - HORIZONTAL */
+  .how-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .how-card {
+    background: var(--bg2);
+    padding: 1.75rem;
+    text-align: center;
+  }
+
+  .how-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+    display: block;
+    line-height: 1;
+  }
+
+  .how-card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .how-card p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* CHAT EMBED */
+  .chat-frame-wrap {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg2);
+  }
+
+  /* GAP TYPES */
+  .gap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .gap-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.4rem 1.5rem;
+    transition: border-color 0.2s;
+  }
+
+  .gap-card:hover { border-color: var(--accent-border); }
+
+  .gap-card h3 {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+
+  .gap-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .gap-icon {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    text-align: center;
+    padding: 5rem 2rem 6rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cta-inner {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .cta-inner h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .cta-inner p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .cta-price {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-price .amount {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--text);
+  }
+
+  .cta-price .original {
+    font-size: 14px;
+    color: var(--text-dim);
+    text-decoration: line-through;
+  }
+
+  .cta-price .label {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* TRUST BAR */
+  .trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .trust-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.6;
+  }
+
+  /* COMPARISON */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+
+  .compare-table th {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .compare-table td {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .compare-table tr td:first-child {
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  .compare-table .highlight {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .compare-table .dim {
+    color: var(--text-dim);
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 1.25rem; }
+    .nav-links { display: none; }
+    section { padding: 3.5rem 1.25rem; }
+    .hero { min-height: 70vh; }
+    .how-grid { grid-template-columns: 1fr; }
+    .trust-bar { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">论文搭子来了</a>
+  <ul class="nav-links">
+    <li><a href="index.html">首页</a></li>
+    <li><a href="#tool">开始分析</a></li>
+    <li><a href="#types">Gap 类型</a></li>
+    <li><a href="blog/research-gap-guide.html">完整指南</a></li>
+    <li><a href="#tool" class="nav-cta">免费使用</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">免费工具</div>
+  <h1>你的研究领域，<br>还有哪些 <em>Research Gap</em>？</h1>
+  <p class="hero-sub">用中文描述你感兴趣的研究方向，AI 基于真实学术文献帮你找到尚未被充分研究的空白领域。每篇引用文献 DOI 可查，不会编造不存在的论文。</p>
+  <div class="hero-actions">
+    <a href="#tool" class="btn-primary">免费开始分析 →</a>
+    <span class="hero-note">无需注册 · 中文对话 · 基于 OpenAlex 学术数据库</span>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="section-label">三步找到 Research Gap</div>
+  <h2 class="section-title">比你自己读 50 篇论文更快</h2>
+  <p class="section-sub">不用先学会英文文献检索。用中文告诉 AI 你对什么感兴趣，剩下的交给它。</p>
+
+  <div class="how-grid">
+    <div class="how-card">
+      <span class="how-num">1</span>
+      <h3>用中文说你的兴趣</h3>
+      <p>比如"我对英国商业地产的绿色认证感兴趣"，越具体越好，但模糊也没关系。</p>
+    </div>
+    <div class="how-card">
+      <span class="how-num">2</span>
+      <h3>AI 检索真实文献</h3>
+      <p>AI 从 OpenAlex 学术数据库检索相关论文，分析研究现状和趋势。</p>
+    </div>
+    <div class="how-card">
+      <span class="how-num">3</span>
+      <h3>找到 2-3 个 Gap</h3>
+      <p>用中文为你解释每个 Gap 是什么类型、为什么值得研究，并给出支撑文献。</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- COMPARISON: WHY NOT JUST USE CHATGPT -->
+<section>
+  <div class="section-label">对比</div>
+  <h2 class="section-title">和 ChatGPT 找 Gap 有什么区别？</h2>
+  <p class="section-sub">通用 AI 工具的最大问题是"幻觉"：它可能编造不存在的论文来支持一个并不真实的 Gap。</p>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>ChatGPT / 通用 AI</th>
+        <th>Research Gap Finder</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>文献来源</td>
+        <td class="dim">训练数据（可能编造）</td>
+        <td class="highlight">OpenAlex 实时检索</td>
+      </tr>
+      <tr>
+        <td>DOI 验证</td>
+        <td class="dim">无</td>
+        <td class="highlight">逐条验证 ✓</td>
+      </tr>
+      <tr>
+        <td>Gap 类型分析</td>
+        <td class="dim">泛泛而谈</td>
+        <td class="highlight">五种类型精准归类</td>
+      </tr>
+      <tr>
+        <td>对话语言</td>
+        <td>中英文均可</td>
+        <td class="highlight">中文对话，学术英文输出</td>
+      </tr>
+      <tr>
+        <td>价格</td>
+        <td>免费或 $20/月</td>
+        <td class="highlight">完全免费</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<hr class="divider">
+
+<!-- TOOL EMBED -->
+<section id="tool">
+  <div class="section-label">Research Gap Finder</div>
+  <h2 class="section-title">用中文开始分析</h2>
+  <p class="section-sub">告诉 AI 你的专业和感兴趣的方向，它会帮你从真实文献中找到 Research Gap。</p>
+
+  <div class="chat-frame-wrap">
+    <iframe
+      src="https://udify.app/chatbot/1npdrTMQfgGlVplh"
+      style="width: 100%; height: 680px; display: block;"
+      frameborder="0"
+      allow="microphone">
+    </iframe>
+  </div>
+
+  <div class="trust-bar">
+    <div class="trust-item"><span class="trust-dot"></span>无需注册</div>
+    <div class="trust-item"><span class="trust-dot"></span>全程中文对话</div>
+    <div class="trust-item"><span class="trust-dot"></span>文献 DOI 可查</div>
+    <div class="trust-item"><span class="trust-dot"></span>完全免费</div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- GAP TYPES -->
+<section id="types">
+  <div class="section-label">五种 Gap 类型</div>
+  <h2 class="section-title">Research Gap 长什么样？</h2>
+  <p class="section-sub">不是所有"还没人研究过"的东西都是好的 Gap。了解五种类型，帮你判断哪个方向值得做。</p>
+
+  <div class="gap-grid">
+    <div class="gap-card">
+      <span class="gap-icon">🔬</span>
+      <h3>Empirical Gap</h3>
+      <p>理论存在但缺乏特定背景下的实证检验。例如：某理论在中国市场尚未被验证。</p>
+    </div>
+    <div class="gap-card">
+      <span class="gap-icon">🧩</span>
+      <h3>Theoretical Gap</h3>
+      <p>现有理论无法解释某些现象，需要新的理论框架或对已有框架的扩展。</p>
+    </div>
+    <div class="gap-card">
+      <span class="gap-icon">📐</span>
+      <h3>Methodological Gap</h3>
+      <p>研究方法上的空白：之前只用了定量方法，定性视角缺失，或缺乏混合方法研究。</p>
+    </div>
+    <div class="gap-card">
+      <span class="gap-icon">🌍</span>
+      <h3>Contextual Gap</h3>
+      <p>研究集中在某个地区或领域，尚未扩展到其他情境。例如：只有美国数据，缺乏英国研究。</p>
+    </div>
+    <div class="gap-card">
+      <span class="gap-icon">⏳</span>
+      <h3>Temporal Gap</h3>
+      <p>研究停留在旧时间段，缺乏对新趋势或政策变化后的更新数据分析。</p>
+    </div>
+  </div>
+
+  <p style="text-align: center;">
+    <a href="blog/research-gap-guide.html" style="color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 400;">
+      阅读完整指南：Research Gap 怎么找？五种类型详解 + 实操方法 →
+    </a>
+  </p>
+</section>
+
+<hr class="divider">
+
+<!-- CTA: CONVERT TO FULL PROPOSAL -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>找到 Gap 了？<br>下一步：生成完整的 <em style="font-style: italic; color: var(--gold);">Research Proposal</em></h2>
+    <p>你已经找到了值得研究的方向。现在，让学术团队帮你把这个 Gap 变成一份可以直接提交给导师的英文 Proposal，包含 Research Question、Literature Review 框架、Methodology 建议和参考文献列表。</p>
+    <div class="cta-price">
+      <span class="label">硕士 Proposal 早鸟价</span>
+      <span class="amount">£49</span>
+      <span class="original">£99</span>
+    </div>
+    <br>
+    <a href="index.html#pricing" class="btn-primary">查看完整服务 →</a>
+    <br><br>
+    <span style="font-size: 13px; color: var(--text-dim);">中文对话 · 英文输出 · 2 个工作日交付 · DOI 验证文献</span>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html">论文搭子来了</a> · <a href="index.html#pricing">定价</a> · <a href="blog/research-gap-guide.html">Research Gap 完整指南</a>
+  <br><br>
+  © 2026 论文搭子来了 · AI Research Proposal 生成服务
+</footer>
+
+</body>
+</html>
